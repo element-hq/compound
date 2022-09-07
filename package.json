@@ -1,5 +1,5 @@
 {
-  "name": "style-dictionary-dark-mode",
+  "name": "@vector-im/compound",
   "version": "1.0.0",
   "description": "",
   "main": "dist/tokens.js",
@@ -13,21 +13,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dbanksdesign/style-dictionary-dark-mode.git"
+    "url": "git+https://github.com/vector-im/compound.git"
   },
   "author": "",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/dbanksdesign/style-dictionary-dark-mode/issues"
+    "url": "https://github.com/vector-im/compound/issues"
   },
-  "homepage": "https://github.com/dbanksdesign/style-dictionary-dark-mode#readme",
+  "homepage": "https://github.com/vector-im/compound#readme",
   "devDependencies": {
-    "chokidar-cli": "^2.1.0",
-    "fs-extra": "^9.1.0",
+    "chokidar-cli": "^3.0.0",
+    "fs-extra": "^10.1.0",
     "lodash": "^4.17.21",
-    "sharp": "^0.27.2",
-    "style-dictionary": "^3.0.0-rc.8",
-    "svg2vectordrawable": "^2.6.26",
+    "sharp": "^0.31.0",
+    "style-dictionary": "^3.7.1",
+    "svg2vectordrawable": "^2.9.1",
     "tinycolor2": "^1.4.2"
   }
 }
