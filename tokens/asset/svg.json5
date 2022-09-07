@@ -6,17 +6,11 @@
       "darkValue": "assets/svg/logo.dark.svg",
       "hcDarkValue": "assets/svg/logo.hcDark.svg",
     },
-    "empty": {
-      "value": "assets/svg/empty.svg",
-      "hcValue": "assets/svg/empty.hc.svg",
-      "darkValue": "assets/svg/empty.dark.svg",
-      "hcDarkValue": "assets/svg/empty.hcDark.svg",
-    },
-    "files": {
-      "value": "assets/svg/files.svg",
-      "hcValue": "assets/svg/files.hc.svg",
-      "darkValue": "assets/svg/files.dark.svg",
-      "hcDarkValue": "assets/svg/files.hcDark.svg",
+    "logo-matrix": {
+      "value": "assets/svg/logo-matrix.svg",
+      "hcValue": "assets/svg/logo-matrix.svg",
+      "darkValue": "assets/svg/logo-matrix.dark.svg",
+      "hcDarkValue": "assets/svg/logo-matrix.dark.svg",
     },
   }
 }
