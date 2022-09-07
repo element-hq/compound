@@ -5,8 +5,6 @@ const iosPath = `ios/dist/`;
 const androidPath = `android/styledictionary/src/main/res/`;
 const webPath = `web/dist/`;
 
-const prefix = "cpd";
-
 // before this runs we should clean the directories we are generating files in
 // to make sure they are ✨clean✨
 console.log(`cleaning ${iosPath}...`);
@@ -115,7 +113,7 @@ StyleDictionary.extend({
     css: {
       transformGroup: `css`,
       buildPath: webPath,
-      prefix,
+      prefix: "cpd",
       files: [{
         destination: `variables.css`,
         format: `css/variables`,
@@ -163,7 +161,6 @@ StyleDictionary.extend({
     iOS: {
       buildPath: iosPath,
       transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`],
-      prefix,
       files: [{
         destination: `Color.swift`,
         format: `swiftColor`,
@@ -186,7 +183,6 @@ StyleDictionary.extend({
     android: {
       transformGroup: `android`,
       buildPath: androidPath,
-      prefix,
       files: [{
         destination: `values/colors.xml`,
         format: `android/resources`,
