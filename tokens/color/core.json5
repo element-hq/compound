@@ -1,7 +1,60 @@
 {
   "color": {
     "core": {
-      "accent": { "value": "#0DBD8B" },
+      "accent": {
+        "value": "#0dbd8b"
+      },
+      "alert": {
+        "value": "#ff5b55"
+      },
+      "links": {
+        "value": "#0086e6"
+      },
+      "primary-content": {
+        "value": "#17191c"
+      },
+      "secondary-content": {
+        "value": "#737d8c"
+      },
+      "tertiary-content": {
+        "value": "#8d97a5"
+      },
+      "quaternary-content": {
+        "value": "#c1c6cd"
+      },
+      "quinary-content": {
+        "value": "#e3e8f0"
+      },
+      "system": {
+        "value": "f4f6fa"
+      },
+      "background": {
+        "value": "#fff"
+      },
+      "content-name-01": {
+        "value": "#368bd6"
+      },
+      "content-name-02": {
+        "value": "#ac3ba8"
+      },
+      "content-name-03": {
+        "value": "#03b381"
+      },
+      "content-name-04": {
+        "value": "#e64f7a"
+      },
+      "content-name-05": {
+        "value": "#ff812d"
+      },
+      "content-name-06": {
+        "value": "#2dc2c5"
+      },
+      "content-name-07": {
+        "value": "#5c56f5"
+      },
+      "content-name-08": {
+        "value": "#74d12c"
+      }
       
       "green": {
         "0": { "value": "#ebf9eb" },
