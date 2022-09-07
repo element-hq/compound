@@ -4,3 +4,4 @@ node_modules
 web/
 android/
 ios/
+.build
