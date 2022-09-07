@@ -12,9 +12,9 @@
  * ```
  */
 module.exports = function({ dictionary, options }) {
-  return `import SwiftUI
+  return `import UIKit
 
-public enum ElementColors {\n` +
+@objcMembers public class ElementUIColors: NSObject {\n` +
   dictionary.allProperties.map(token => {
     return `    public static let ${token.name} = ${token.value}`
   }).join(`\n`) + `

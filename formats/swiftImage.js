@@ -13,9 +13,7 @@ module.exports = function({ dictionary, options }) {
 
 extension Image {\n` +
   dictionary.allProperties.map(token => {
-    return `  public static var ${token.name}: Image {
-    return Image.init("${token.name}", bundle: bundle)
-  }`
+    return `  public static var ${token.name}: Image { Image("${token.name}", bundle: bundle) }`
   }).join(`\n`) +
   `\n};`
 }

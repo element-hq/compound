@@ -98,6 +98,7 @@ StyleDictionary.extend({
   // custom formats
   format: {
     swiftColor: require('./formats/swiftColor'),
+    swiftColorUIKit: require('./formats/swiftColorUIKit'),
     swiftImage: require('./formats/swiftImage'),
     androidDark: darkFormatWrapper(`android/resources`),
     cssDark: darkFormatWrapper(`css/variables`),
@@ -152,15 +153,22 @@ StyleDictionary.extend({
       actions: [`generateGraphics`]
     },
     
-    iosColors: {
+    iOSUIKit: {
       buildPath: iosPath,
-      transforms: [`attribute/cti`,`colorRGB`,`name/ti/camel`],
-      actions: [`generateColorsets`]
+      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`, `color/UIColorSwift`],
+      files: [{
+          destination: `UIColor.swift`,
+          format: `swiftColorUIKit`,
+          filter: (token) => token.attributes.category === `color`,
+          options: {
+            outputReferences: true
+          }
+        }]
     },
     
     iOS: {
       buildPath: iosPath,
-      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`],
+      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`, `color/ColorSwiftUI`],
       files: [{
         destination: `Color.swift`,
         format: `swiftColor`,
