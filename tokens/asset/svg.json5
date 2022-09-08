@@ -1,11 +1,11 @@
 {
-  "image": {
-    "logo": {
-      "value": "assets/svg/logo.svg"
-    },
-    "logo-matrix": {
-      "value": "assets/svg/logo-matrix.svg",
-      "hcValue": "assets/svg/logo-matrix.svg"
-    },
-  }
+  // "image": {
+  //   "logo": {
+  //     "value": "assets/svg/logo.svg"
+  //   },
+  //   "logo-matrix": {
+  //     "value": "assets/svg/logo-matrix.svg",
+  //     "hcValue": "assets/svg/logo-matrix.svg"
+  //   },
+  // }
 }

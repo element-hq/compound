@@ -1,15 +1,15 @@
 {
-  "color": {
-    "brand": {
-      "primary": {
-        "base": {
-          "value": "{color.core.accent}",
-        },
-      },
-      "matrix": {
-        "value": "#000",
-        "darkValue": "#fff",
-      },
-    }
-  }
+  // "color": {
+  //   "brand": {
+  //     "primary": {
+  //       "base": {
+  //         "value": "{color.core.accent}",
+  //       },
+  //     },
+  //     "matrix": {
+  //       "value": "#000",
+  //       "darkValue": "#fff",
+  //     },
+  //   }
+  // }
 }
