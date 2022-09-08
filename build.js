@@ -1,5 +1,6 @@
 const StyleDictionary = require('style-dictionary');
 const fs = require('fs-extra');
+const { themeFormatter } = require('./formats/theme');
 
 const iosPath = `ios/dist/`;
 const androidPath = `android/styledictionary/src/main/res/`;
@@ -13,75 +14,6 @@ console.log(`cleaning ${androidPath}...`);
 fs.removeSync(androidPath);
 console.log(`cleaning ${webPath}...`);
 fs.removeSync(webPath);
-
-/**
- * This function will wrap a built-in format and replace `.value` with `.darkValue`
- * if a token has a `.darkValue`.
- * @param {String} format - the name of the built-in format
- * @returns {Function}
- */
-function darkFormatWrapper(format) {
-  return function(args) {
-    const dictionary = Object.assign({}, args.dictionary);
-    // Override each token's `value` with `darkValue`
-    dictionary.allTokens = dictionary.allTokens.map(token => {
-      const {darkValue} = token;
-      if (darkValue) {
-        return Object.assign({}, token, {
-          value: token.darkValue
-        });
-      } else {
-        return token;
-      }
-    });
-    
-    // Use the built-in format but with our customized dictionary object
-    // so it will output the darkValue instead of the value
-    return StyleDictionary.format[format]({ ...args, dictionary })
-  }
-}
-
-function hcFormatWrapper(format) {
-  return function(args) {
-    const dictionary = Object.assign({}, args.dictionary);
-    // Override each token's `value` with `hcValue`
-    dictionary.allProperties = dictionary.allProperties.map(token => {
-      const {hcValue} = token;
-      if (hcValue) {
-        return Object.assign({}, token, {
-          value: token.hcValue
-        });
-      } else {
-        return token;
-      }
-    });
-    
-    // Use the built-in format but with our customized dictionary object
-    // so it will output the hcValue instead of the value
-    return StyleDictionary.format[format]({ ...args, dictionary })
-  }
-}
-
-function hcDarkFormatWrapper(format) {
-  return function(args) {
-    const dictionary = Object.assign({}, args.dictionary);
-    // Override each token's `value` with `hcDarkValue`
-    dictionary.allProperties = dictionary.allProperties.map(token => {
-      const {hcDarkValue} = token;
-      if (hcDarkValue) {
-        return Object.assign({}, token, {
-          value: token.hcDarkValue
-        });
-      } else {
-        return token;
-      }
-    });
-    
-    // Use the built-in format but with our customized dictionary object
-    // so it will output the hcValue instead of the value
-    return StyleDictionary.format[format]({ ...args, dictionary })
-  }
-}
 
 StyleDictionary.extend({
   // custom actions
@@ -100,10 +32,10 @@ StyleDictionary.extend({
     swiftColor: require('./formats/swiftColor'),
     swiftColorUIKit: require('./formats/swiftColorUIKit'),
     swiftImage: require('./formats/swiftImage'),
-    androidDark: darkFormatWrapper(`android/resources`),
-    cssDark: darkFormatWrapper(`css/variables`),
-    cssHcDark: hcDarkFormatWrapper(`css/variables`),
-    cssHc: hcFormatWrapper(`css/variables`),
+    androidDark: themeFormatter(`darkValue`, `android/resources`),
+    cssDark: themeFormatter(`darkValue`, `css/variables`),
+    cssHcDark: themeFormatter(`hcValue`, `css/variables`),
+    cssHc: themeFormatter(`hcDarkValue`, `css/variables`),
   },
   
   source: [
