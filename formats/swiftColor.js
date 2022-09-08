@@ -14,7 +14,7 @@
 module.exports = function({ dictionary, options }) {
   return `import SwiftUI
 
-public enum ElementColors {\n` +
+public enum CompoundColors {\n` +
   dictionary.allProperties.map(token => {
     return `    public static let ${token.name} = ${token.value}`
   }).join(`\n`) + `

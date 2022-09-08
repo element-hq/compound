@@ -14,7 +14,7 @@
 module.exports = function({ dictionary, options }) {
   return `import UIKit
 
-@objcMembers public class ElementUIColors: NSObject {\n` +
+@objcMembers public class CompoundUIColors: NSObject {\n` +
   dictionary.allProperties.map(token => {
     return `    public static let ${token.name} = ${token.value}`
   }).join(`\n`) + `
