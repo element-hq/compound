@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "start": "npm run build && chokidar \"tokens/**/*\" -c \"npm run build\""
+    "start": "npm run build && chokidar \"tokens/**/*\" -c \"npm run build\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,16 @@
   },
   "homepage": "https://github.com/vector-im/compound#readme",
   "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
     "chokidar-cli": "^3.0.0",
     "fs-extra": "^10.1.0",
     "lodash": "^4.17.21",
@@ -29,5 +41,9 @@
     "style-dictionary": "^3.7.1",
     "svg2vectordrawable": "^2.9.1",
     "tinycolor2": "^1.4.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
