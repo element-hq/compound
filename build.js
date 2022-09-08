@@ -116,23 +116,28 @@ StyleDictionary.extend({
       buildPath: webPath,
       prefix: "cpd",
       files: [{
-        destination: `variables.css`,
+          destination: `variables.css`,
+          format: `css/variables`,
+          filter: (token) => token.attributes.category === `color` && token.attributes.type !== `core`,
+          options: {
+            outputReferences: true
+          }
+      },{
+        destination: `variables-light.css`,
         format: `css/variables`,
-        options: {
-          outputReferences: true
-        }
+        filter: (token) => token.attributes.type === `core` && token.attributes.category === `color`
       },{
         destination: `variables-dark.css`,
         format: `cssDark`,
-        filter: (token) => token.darkValue && token.attributes.category === `color`
+        filter: (token) => token.attributes.category === `color`
       },{
         destination: `variables-hc.css`,
         format: `cssHc`,
-        filter: (token) => token.hcValue && token.attributes.category === `color`
+        filter: (token) => token.attributes.category === `color`
       },{
         destination: `variables-hc-dark.css`,
         format: `cssHcDark`,
-        filter: (token) => token.hcDarkValue && token.attributes.category === `color`
+        filter: (token) => token.attributes.category === `color`
       }]
     },
     
