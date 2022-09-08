@@ -9,9 +9,9 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "start": "yarn run build && chokidar \"tokens/**/*\" -c \"yarn run build\"",
-    "storybook": "yarn run build && start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "npm run build && chokidar \"tokens/**/*\" -c \"npm run build\"",
+    "storybook": "npm run build && start-storybook -p 6006",
+    "build-storybook": "npm run build && build-storybook"
   },
   "repository": {
     "type": "git",

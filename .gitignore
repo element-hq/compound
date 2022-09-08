@@ -5,3 +5,4 @@ web/
 android/
 ios/
 .build
+storybook-static
