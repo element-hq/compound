@@ -1,3 +1,5 @@
+const ElementTheme =  require('./ElementTheme');
+
 module.exports = {
   "stories": [
     "../stories/**/*.stories.mdx",
