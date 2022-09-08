@@ -24,7 +24,7 @@ function darkFormatWrapper(format) {
   return function(args) {
     const dictionary = Object.assign({}, args.dictionary);
     // Override each token's `value` with `darkValue`
-    dictionary.allProperties = dictionary.allProperties.map(token => {
+    dictionary.allTokens = dictionary.allTokens.map(token => {
       const {darkValue} = token;
       if (darkValue) {
         return Object.assign({}, token, {
