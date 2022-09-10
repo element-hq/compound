@@ -19,11 +19,11 @@ public enum CompoundColors {\n` +
     return `    public static let ${token.name} = ${token.value}`
   }).join(`\n`) + `
     
-    /// All of the colors from Compound in a format that can be iterated through.
+    /// All of the colors from Compound in a dictionary that can be iterated through.
     public static var allColors: [String: Color] {
         [\n` +
   dictionary.allProperties.map(token => {
-    return `            "${token.name}": ${token.name}`
+    return `            "${token.name}": ${token.name},`
   }).join(`\n`) + `
         ]
     }
