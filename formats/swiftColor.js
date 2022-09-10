@@ -16,7 +16,8 @@ module.exports = function({ dictionary, options }) {
 
 public enum CompoundColors {\n` +
   dictionary.allProperties.map(token => {
-    return `    public static let ${token.name} = ${token.value}`
+    let value = swiftUIColor(token, dictionary, options)
+    return `    public static let ${token.name} = ${value}`
   }).join(`\n`) + `
     
     /// All of the colors from Compound in a dictionary that can be iterated through.
@@ -27,5 +28,27 @@ public enum CompoundColors {\n` +
   }).join(`\n`) + `
         ]
     }
-}`
+}\n`
+}
+
+/** The token's value as a Color for SwiftUI */
+function swiftUIColor(token, dictionary, options) {
+  // if the token does not have a reference or has a darkValue
+  // use the colorset of the same name
+  // else use the reference name
+  if (options.outputReferences) {
+    // if it has a dark value -> use the colorset (all colors with darkValue have a colorset)
+    if (token.darkValue) {
+      return `Color("${token.name}", bundle: .module)`;
+    // if it is a reference -> refer to the Color extension name
+    } else if (dictionary.usesReference(token.original.value)) {
+      const reference = dictionary.getReferences(token.original.value)[0];
+      return `ElementColors.${reference.name}`
+    // default to using the colorset
+    } else {
+      return `Color("${token.name}", bundle: .module)`
+    }
+  } else {
+    return `Color("${token.name}", bundle: .module)`;
+  }
 }

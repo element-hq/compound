@@ -16,7 +16,30 @@ module.exports = function({ dictionary, options }) {
 
 @objcMembers public class CompoundUIColors: NSObject {\n` +
   dictionary.allProperties.map(token => {
-    return `    public static let ${token.name} = ${token.value}`
+    let value = uiKitColor(token, dictionary, options)
+    return `    public static let ${token.name} = ${value}`
   }).join(`\n`) + `
-}`
+}\n`
+}
+
+/** The token's value as a UIColor for UIKit */
+function uiKitColor(token, dictionary, options) {
+  // if the token does not have a reference or has a darkValue
+  // use the colorset of the same name
+  // else use the reference name
+  if (options.outputReferences) {
+    // if it has a dark value -> use the colorset (all colors with darkValue have a colorset)
+    if (token.darkValue) {
+      return `UIColor(named: "${token.name}", in: .module, compatibleWith: nil)!`;
+    // if it is a reference -> refer to the Color extension name
+    } else if (dictionary.usesReference(token.original.value)) {
+      const reference = dictionary.getReferences(token.original.value)[0];
+      return `ElementUIColors.${reference.name}`
+    // default to using the colorset
+    } else {
+      return `UIColor(named: "${token.name}", in: .module, compatibleWith: nil)!`
+    }
+  } else {
+    return `UIColor(named: "${token.name}", in: .module, compatibleWith: nil)!`;
+  }
 }

@@ -90,22 +90,28 @@ StyleDictionary.extend({
       actions: [`generateGraphics`]
     },
     
+    iOSColors: {
+      buildPath: iosPath,
+      transforms: [`attribute/cti`,`colorRGB`,`name/ti/camel`],
+      actions: [`generateColorsets`]
+    },
+    
     iOSUIKit: {
       buildPath: iosPath,
-      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`, `color/UIColorSwift`],
+      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`],
       files: [{
-          destination: `UIColor.swift`,
-          format: `swiftColorUIKit`,
-          filter: (token) => token.attributes.category === `color`,
-          options: {
-            outputReferences: true
-          }
-        }]
+        destination: `UIColor.swift`,
+        format: `swiftColorUIKit`,
+        filter: (token) => token.attributes.category === `color`,
+        options: {
+          outputReferences: true
+        }
+      }]
     },
     
     iOS: {
       buildPath: iosPath,
-      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`, `color/ColorSwiftUI`],
+      transforms: [`attribute/cti`,`name/ti/camel`,`size/swift/remToCGFloat`],
       files: [{
         destination: `Color.swift`,
         format: `swiftColor`,
