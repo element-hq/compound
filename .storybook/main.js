@@ -8,7 +8,8 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "storybook-addon-designs"
   ],
   "staticDirs": ['../public'],
   "framework": "@storybook/react"
