@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/tokens.js",
-  "files": [
-    "web/dist",
-    "build.js"
-  ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
