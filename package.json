@@ -5,7 +5,8 @@
   "main": "dist/tokens.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,10 @@
     "babel-loader": "^8.2.5",
     "chokidar-cli": "^3.0.0",
     "fs-extra": "^10.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "lodash": "^4.17.21",
+    "prettier": "^2.8.3",
     "sharp": "^0.31.0",
     "storybook-addon-designs": "^6.3.1",
     "style-dictionary": "^3.7.1",
@@ -40,5 +44,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
