@@ -1,5 +1,5 @@
 import React from "react";
-import FigmaLiveEmbed from "./utils/FigmaLiveEmbed";
+import FigmaLiveEmbed from "./components/FigmaLiveEmbed";
 
 export default {
   title: "Typography",
