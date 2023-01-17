@@ -3,15 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/tokens.js",
-  "files": [
-    "web/dist",
-    "build.js"
-  ],
   "scripts": {
-    "build": "node build.js",
-    "start": "npm run build && chokidar \"tokens/**/*\" -c \"npm run build\"",
-    "storybook": "npm run build && start-storybook -p 6006",
-    "build-storybook": "npm run build && build-storybook"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -22,22 +16,23 @@
   "bugs": {
     "url": "https://github.com/vector-im/compound/issues"
   },
-  "homepage": "https://github.com/vector-im/compound#readme",
+  "homepage": "https://vector-im.github.io/compound",
   "devDependencies": {
     "@babel/core": "^7.19.0",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-essentials": "^6.5.10",
-    "@storybook/addon-interactions": "^6.5.10",
-    "@storybook/addon-links": "^6.5.10",
-    "@storybook/builder-webpack4": "^6.5.10",
-    "@storybook/manager-webpack4": "^6.5.10",
-    "@storybook/react": "^6.5.10",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack4": "^6.5.15",
+    "@storybook/manager-webpack4": "^6.5.15",
+    "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
     "chokidar-cli": "^3.0.0",
     "fs-extra": "^10.1.0",
     "lodash": "^4.17.21",
     "sharp": "^0.31.0",
+    "storybook-addon-designs": "^6.3.1",
     "style-dictionary": "^3.7.1",
     "svg2vectordrawable": "^2.9.1",
     "tinycolor2": "^1.4.2"
