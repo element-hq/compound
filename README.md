@@ -2,14 +2,15 @@
 
 # Compound
 
-Element's design tokens based on [Dark mode with Style Dictionary](https://dbanks.design/blog/dark-mode-with-style-dictionary). Source file available on [Figma](https://www.figma.com/file/X4XTH9iS2KGJ2wFKDqkyed/Compound?node-id=557%3A0)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://vector-im.github.io/compound/) [![](https://img.shields.io/github/license/vector-im/compound)](https://github.com/vector-im/compound/blob/main/LICENSE)
 
-## Build 
+## Develop
 
-Executing the following command at the root of the project will generate all design tokens in a format that all platforms can consume
+This project is using Storybook to document the design system. It gets automatically deployed
+when a new commit is pushed to the main branch. To develop locally, you will need [node](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/lang/en/)
+
+Once installed, run the following command at the root of this project
 
 ```
-yarn build
+yarn && yarn start-storybook
 ```
-
-Output can be found at `ios/dist`, `android/dist`, `web/dist`.
