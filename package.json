@@ -8,10 +8,8 @@
     "build.js"
   ],
   "scripts": {
-    "build": "node build.js",
-    "start": "npm run build && chokidar \"tokens/**/*\" -c \"npm run build\"",
-    "storybook": "npm run build && start-storybook -p 6006",
-    "build-storybook": "npm run build && build-storybook"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -22,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/vector-im/compound/issues"
   },
-  "homepage": "https://github.com/vector-im/compound#readme",
+  "homepage": "https://vector-im.github.io/compound",
   "devDependencies": {
     "@babel/core": "^7.19.0",
     "@storybook/addon-actions": "^6.5.10",
