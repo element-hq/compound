@@ -1,0 +1,9 @@
+{
+  "size": {
+    "default": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "The default font size"
+    }
+  }
+}
