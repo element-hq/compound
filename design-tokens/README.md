@@ -1,4 +1,4 @@
-# Compound Design Tokens
+# Compound Design Tokens
 
 Home to the design tokens.
 
