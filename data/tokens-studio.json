@@ -118,6 +118,27 @@
         "value": "{space.scale} * 64",
         "type": "spacing"
       }
+    },
+    "border": {
+      "width": {
+        "1": {
+          "value": "1",
+          "type": "borderWidth"
+        },
+        "2": {
+          "value": "2",
+          "type": "borderWidth"
+        },
+        "4": {
+          "value": "4",
+          "type": "borderWidth"
+        },
+        "0_5": {
+          "value": "0.5",
+          "type": "borderWidth",
+          "description": "Only available in mobile platforms, mobile web, and webviews."
+        }
+      }
     }
   },
   "$themes": [],
