@@ -1,5 +1,5 @@
 {
-  "global": {
+  "core": {
     "space": {
       "scale": {
         "value": "4",
@@ -123,7 +123,7 @@
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "global"
+      "core"
     ]
   }
 }
