@@ -139,6 +139,50 @@
           "description": "Only available in mobile platforms, mobile web, and webviews."
         }
       }
+    },
+    "font": {
+      "family": {
+        "sans": {
+          "value": "Inter",
+          "type": "fontFamilies"
+        },
+        "mono": {
+          "value": "Inconsolata",
+          "type": "fontFamilies"
+        }
+      },
+      "weight": {
+        "regular": {
+          "value": "400",
+          "type": "fontWeights"
+        },
+        "medium": {
+          "value": "500",
+          "type": "fontWeights"
+        },
+        "semibold": {
+          "value": "600",
+          "type": "fontWeights"
+        },
+        "bold": {
+          "value": "700",
+          "type": "fontWeights"
+        }
+      },
+      "line-height": {
+        "xs": {
+          "value": "100%",
+          "type": "lineHeights"
+        },
+        "sm": {
+          "value": "125%",
+          "type": "lineHeights"
+        },
+        "md": {
+          "value": "150%",
+          "type": "lineHeights"
+        }
+      }
     }
   },
   "$themes": [],
