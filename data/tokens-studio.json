@@ -182,6 +182,44 @@
           "value": "150%",
           "type": "lineHeights"
         }
+      },
+      "size": {
+        "body": {
+          "xs": {
+            "value": "11",
+            "type": "fontSizes"
+          },
+          "sm": {
+            "value": "13",
+            "type": "fontSizes"
+          },
+          "md": {
+            "value": "15",
+            "type": "fontSizes"
+          },
+          "lg": {
+            "value": "17",
+            "type": "fontSizes"
+          }
+        },
+        "heading": {
+          "sm": {
+            "value": "20",
+            "type": "fontSizes"
+          },
+          "md": {
+            "value": "24",
+            "type": "fontSizes"
+          },
+          "lg": {
+            "value": "28",
+            "type": "fontSizes"
+          },
+          "xl": {
+            "value": "32",
+            "type": "fontSizes"
+          }
+        }
       }
     }
   },
