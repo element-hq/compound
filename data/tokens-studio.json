@@ -220,6 +220,44 @@
             "type": "fontSizes"
           }
         }
+      },
+      "letter-spacing": {
+        "body": {
+          "xs": {
+            "value": "0.48%",
+            "type": "letterSpacing"
+          },
+          "sm": {
+            "value": "0.31%",
+            "type": "letterSpacing"
+          },
+          "md": {
+            "value": "0.88%",
+            "type": "letterSpacing"
+          },
+          "lg": {
+            "value": "-1.28%",
+            "type": "letterSpacing"
+          }
+        },
+        "heading": {
+          "sm": {
+            "value": "-1.66%",
+            "type": "letterSpacing"
+          },
+          "md": {
+            "value": "-1.95%",
+            "type": "letterSpacing"
+          },
+          "lg": {
+            "value": "-2.09%",
+            "type": "letterSpacing"
+          },
+          "xl": {
+            "value": "-2.16%",
+            "type": "letterSpacing"
+          }
+        }
       }
     }
   },
