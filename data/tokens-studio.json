@@ -551,11 +551,23 @@
       }
     }
   },
+  "platform-android": {},
+  "platform-ios": {},
+  "theme-light": {},
+  "theme-light-hc": {},
+  "theme-dark": {},
+  "theme-dark-hc": {},
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "cross-platform",
-      "platform-web"
+      "platform-web",
+      "platform-android",
+      "platform-ios",
+      "theme-light",
+      "theme-light-hc",
+      "theme-dark",
+      "theme-dark-hc"
     ]
   }
 }
