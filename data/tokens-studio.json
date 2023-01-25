@@ -557,6 +557,7 @@
   "theme-light-hc": {},
   "theme-dark": {},
   "theme-dark-hc": {},
+  "theme-semantics": {},
   "brand-example/cross-platform": {},
   "$themes": [],
   "$metadata": {
@@ -569,6 +570,7 @@
       "theme-light-hc",
       "theme-dark",
       "theme-dark-hc",
+      "theme-semantics",
       "brand-example/cross-platform"
     ]
   }
