@@ -2,7 +2,7 @@ const commonTransforms = [
   "ts/resolveMath",
   "ts/size/px",
   "ts/size/letterspacing",
-  // "ts/color/hexrgba",
+  "ts/color/hexrgba",
   "ts/typography/shorthand",
   "ts/shadow/shorthand",
   "attribute/cti",
