@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 27 Jan 2023 13:41:34 GMT
+ * Generated on Fri, 27 Jan 2023 13:56:49 GMT
  */
 
 export const cpdSpaceScale = "4px";
@@ -83,6 +83,8 @@ export const cpdColorGray1100 = "#a4a8b4";
 export const cpdColorGray1200 = "#bdc0c9";
 export const cpdColorGray1300 = "#d9dbe1";
 export const cpdColorGray1400 = "#eaebee";
+export const cpdColorGreen900 = "#0e9876";
 export const cpdColorTextPrimary = "#eaebee";
 export const cpdColorTextSecondary = "#818694";
+export const cpdColorTextAccent = "#0e9876";
 export const cpdColorSurfaceLevel1 = "#17181a";

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 27 Jan 2023 13:41:34 GMT
+ * Generated on Fri, 27 Jan 2023 13:56:49 GMT
  */
 
 :root {
@@ -84,7 +84,9 @@
   --cpd-color-gray-1200: #2d2f35;
   --cpd-color-gray-1300: #202125;
   --cpd-color-gray-1400: #1b1c1f;
+  --cpd-color-green-900: #125b4a;
   --cpd-color-text-primary: #1b1c1f;
   --cpd-color-text-secondary: #4b505b;
+  --cpd-color-text-accent: #125b4a;
   --cpd-color-surface-level-1: #f0f1f3;
 }
