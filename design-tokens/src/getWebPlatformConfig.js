@@ -2,11 +2,11 @@ const commonTransforms = [
   "ts/resolveMath",
   "ts/size/px",
   "ts/size/letterspacing",
-  "ts/type/fontWeight",
-  "ts/color/hexrgba",
+  // "ts/color/hexrgba",
   "ts/typography/shorthand",
   "ts/shadow/shorthand",
   "attribute/cti",
+  "color/hex",
 ];
 
 const prefix = "cpd";
