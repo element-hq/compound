@@ -7,8 +7,6 @@
     "theme-light",
     "theme-light-hc",
     "theme-dark",
-    "theme-dark-hc",
-    "theme-semantics",
-    "brand-example/cross-platform"
+    "theme-dark-hc"
   ]
 }
