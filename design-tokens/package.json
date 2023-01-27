@@ -1,0 +1,16 @@
+{
+  "name": "design-tokens",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tokens-studio/sd-transforms": "^0.3.1",
+    "fast-glob": "^3.2.12",
+    "style-dictionary": "^3.7.2"
+  }
+}
