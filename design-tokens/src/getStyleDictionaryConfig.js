@@ -7,17 +7,12 @@ module.exports = function (theme, platform) {
     platforms: {},
   };
 
-  if (theme === "light") {
-    config.source = glob.sync([
-      "tokens/**/*.json",
-      "!tokens/**/platform-*.json",
-      "!tokens/**/theme-*.json",
-      `tokens/**/platform-${platform}.json`,
-      `tokens/**/theme-${theme}.json`,
-    ]);
-  } else {
-    config.source = glob.sync([`tokens/**/theme-${theme}.json`]);
-  }
+  config.source = glob.sync([
+    "tokens/cross-platform.json",
+    `tokens/platform-${platform}.json`,
+    `tokens/theme-${theme}.json`,
+    `tokens/theme-semantics.json`,
+  ]);
 
   switch (platform) {
     case "web":

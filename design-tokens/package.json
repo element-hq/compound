@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "dev": "http-server ."
   },
   "keywords": [],
   "author": "",
@@ -11,6 +12,7 @@
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^0.3.1",
     "fast-glob": "^3.2.12",
+    "http-server": "^14.1.1",
     "style-dictionary": "^3.7.2"
   }
 }
