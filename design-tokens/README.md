@@ -13,7 +13,7 @@ Home to the design tokens.
 
 ## Development
 
-The tokens are defined under the `tokens/` folder and follow the [W3C Design Tokens specification](https://design-tokens.github.io/community-group/format/).
+The tokens are defined under the `tokens/` folder and are synced from [tokens.studio](https://tokens.studio/).
 They are then transformed to the supported platforms using [Style Dictionary](https://amzn.github.io/style-dictionary/).
 
 All consumable tokens are generated under `assets/`. Generate them by running
