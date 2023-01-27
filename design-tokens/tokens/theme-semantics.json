@@ -8,6 +8,10 @@
       "secondary": {
         "value": "{color.gray-900}",
         "type": "color"
+      },
+      "accent": {
+        "value": "{color.green-900}",
+        "type": "color"
       }
     },
     "surface": {

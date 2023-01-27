@@ -55,6 +55,10 @@
     "gray-1400": {
       "value": "#1c1d20",
       "type": "color"
+    },
+    "green-900": {
+      "value": "#007a62",
+      "type": "color"
     }
   }
 }
