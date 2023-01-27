@@ -4,10 +4,12 @@ Home to the design tokens.
 
 ## Supported platforms
 
-- iOS
-- Android
-- CSS Properties
-- JavaScript (JSON export)
+| Platform   | Themes                     | Support |
+| ---------- | -------------------------- | ------- |
+| CSS        | Light, dark, high contrast | ✅      |
+| JavaScript | Light, dark, high contrast | ✅      |
+| iOS        |                            | 🚧      |
+| Android    |                            | 🚧      |
 
 ## Development
 
