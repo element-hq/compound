@@ -1,6 +1,6 @@
 const glob = require("fast-glob");
 
-const getWebPlatformConfig = require("./getWebPlatformConfig");
+const getWebConfig = require("./platformConfigs/getWebConfig");
 
 module.exports = function (theme, platform) {
   const config = {
@@ -16,8 +16,8 @@ module.exports = function (theme, platform) {
 
   switch (platform) {
     case "web":
-      config.platforms.js = getWebPlatformConfig("js", theme);
-      config.platforms.css = getWebPlatformConfig("css", theme);
+      config.platforms.js = getWebConfig("js", theme);
+      config.platforms.css = getWebConfig("css", theme);
       break;
     default:
       throw `Unsupported platform: ${platform}`;
