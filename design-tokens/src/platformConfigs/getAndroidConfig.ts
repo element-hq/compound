@@ -1,20 +1,21 @@
-const commonTransforms = [
-  "ts/resolveMath",
-  "ts/size/letterspacing",
-  "ts/color/hexrgba",
-  "ts/typography/shorthand",
-  "ts/shadow/shorthand",
-  "attribute/cti",
-  "color/composeColor",
-];
+import { Platform } from "style-dictionary/types/Platform";
+import { Theme } from "../@types";
 
 const prefix = "cpd";
 
-module.exports = function (theme) {
+export default function getAndroidConfig(theme: Theme): Platform {
   return {
     transformGroup: `tokens-android`,
     prefix,
-    transforms: [...commonTransforms, "camelCaseDecimal"],
+    transforms: [
+      "ts/size/letterspacing",
+      "ts/color/hexrgba",
+      "ts/typography/shorthand",
+      "ts/shadow/shorthand",
+      "attribute/cti",
+      "color/composeColor",
+      "camelCaseDecimal",
+    ],
     buildPath: `assets/android/kotlin/`,
     files: [
       {
@@ -29,4 +30,4 @@ module.exports = function (theme) {
       },
     ],
   };
-};
+}
