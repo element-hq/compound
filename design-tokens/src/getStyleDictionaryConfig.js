@@ -1,6 +1,6 @@
 const glob = require("fast-glob");
 
-const getWebPlatformConfig = require("./getWebPlatformConfig");
+const getWebPlatformConfig = require("./platformConfigs/getWebConfig");
 
 module.exports = function (theme, platform) {
   const config = {
