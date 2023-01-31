@@ -28,6 +28,10 @@ module.exports = function (target, theme) {
       {
         destination: `${theme}.${target}`,
         format: target === "css" ? "css/variables" : "javascript/es6",
+        options: {
+          showFileHeader: false,
+          outputReferences: true,
+        },
       },
     ],
   };

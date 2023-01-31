@@ -1,8 +1,3 @@
-/**
- * Do not edit directly
- * Generated on Fri, 27 Jan 2023 13:56:49 GMT
- */
-
 export const cpdSpaceScale = "4px";
 export const cpdSpace0X = "0px";
 export const cpdSpace0_5X = "2px";
