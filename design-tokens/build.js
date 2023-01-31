@@ -1,7 +1,7 @@
 const setupStyleDictionary = require("./src/setupStyleDictionary");
 
 const themes = ["light", "light-hc", "dark", "dark-hc"];
-const platforms = ["web"];
+const platforms = ["web", "android"];
 
 (async () => {
   for (const theme of themes) {
