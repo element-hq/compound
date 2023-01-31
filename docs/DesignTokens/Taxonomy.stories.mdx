@@ -2,4 +2,137 @@ import { Meta } from "@storybook/addon-docs";
 
 <Meta title="Design Tokens Taxonomy" />
 
-WIP
+# 🚧 WIP
+
+## System namespace
+
+All tokens start with the namespace for the design system, `cds`.
+
+## Token tiers
+
+Our design tokens are conceptually divided into three tiers:
+
+- System
+- Reference
+- Components
+
+The top level is global and not aware of context. Subsequent tiers are context-aware, each one being more precise.
+
+System tokens describe plain values, while reference tokens describe their purpose in specific contexts. Component tokens describe the intended use in the context of a specific component.
+
+With three kinds of tokens, we can update design decisions globally or apply a change to a single component.
+
+### System
+
+Namespace: `sys`
+🔴 TODO: Consider removing namespace.
+
+Use for global, immutable literal values.
+
+### Reference
+
+Namespace: `ref`
+🔴 TODO: Consider removing namespace.
+
+Reference tokens are semantic aliases that map system tokens to specific contexts. They represent the choices the design system team made in regards to when to use which token.
+
+It allows us to granularly target and control the mapping of system tokens to specific contexts, decoupling it from other contexts that happen to consume the same system token.
+
+### Component
+
+Namespace: `cmp`
+🔴 TODO: Consider removing namespace.
+
+Semantic aliases for mapping tokens to component-specific contexts.
+
+## Token taxonomy
+
+### Namespace
+
+- System
+  - `cds`
+- Theme — Define themes by extending and overriding default tokens. Useful for brands, sub-brands, white-labeling, and color schemes.
+  - `ees`
+- (Domain) — Currently unsupported, but reserved for potential future needs. It could be used for specific business units (e.g., `security`).
+- Scope
+  - `sys`, `ref`, `cmp`. 🔴 TODO: Consider removing token scope namespaces.
+
+### Object
+
+- Group — For targeting the same property across multiple components.
+  - `forms` for defining the border color for input controls (text input, select, checkbox, radio input…).
+  - `controls` for controls you interact with like form fields and navigation.
+  - `actions` for tageting both buttons and links.
+- Component
+  - `button`, `input`, `checkbox`, `tooltip`, `modal`…
+- Element — For targeting elements within a component, similar to [BEM](https://getbem.com/).
+  - `icon` within a `button` component.
+
+### Base
+
+- Category
+  - `color`, `font`, `border`, `space`, `size`, `shadow`, `elevation`, `opacity`, `breakpoint`, `touch`, `time`
+- Property
+  - `background`, `text`, `border`, and `icon` for `color` category
+  - `family`, `size`, `weight`, `line-height`, and `letter-spacing` for `font` category
+  - `width`, `style`, `radius` for `border` category  
+- Concept and sub-concepts
+  - `feedback`, `action`, and `surface` for `color` category
+  - `display`, `heading` and `body` for `font` category 
+
+### Modifier
+
+- Variant — Distinguishes alternative use cases.
+  - Intent
+    - `info`, `success`, `warning`, and `cirtical` for `feedback` concept
+    - `conversion`, `positive`, `negative`, and `neutral` for `action`
+  - Emphasis — Prominence
+    - `primary`, `secondary`, and `tertiary` for `action` concept 
+- State — Properties based on interactive states.
+  - `default`, `hovered`, `active`/`pressed`, `focused`, `selected`, `visited`, `disabled`,  `error`
+- Scale — Choices within a predefined set of values, like varying size, space, shade, and other options.
+  - Ordinal: t-shirt sizes (xxs, xs, sm, md, lg, xl, xxl…).
+  - Sequential/stepped/numerical: base 100 (100, 200, 300…), base 1/index (0_5, 1, 2, 4…)
+  - Proportional: -1x, 0_5x, 1x, 2x…
+  - Keyword/Named:
+    - circle
+    - regular, tight, loose
+    - regular, medium, semi-bold, bold
+    - sans, serif, mono
+    - minimum
+    - ease-in, ease-out
+- Mode — Distinguish values across two or more surface/background settings on which elements appear. Use only when there’s a distinction (e.g., color and shadow for dark theme).
+  - `on-light`, `on-dark`, `on-light-hc`, `on-dark-hc`, or any colored surface like `invert`, `on-accent`, `on-primary`, `on-secondary`, `on-surface`.
+
+### Other naming rules
+
+- For compound words, use hyphens to separate the words: `line-height`, `on-primary`, `on-dark-hc`
+- For decimal values, replace the decimal point with an underscore: `0_5` for 0.5.
+- For negative values, use a hyphen: `-1`.
+- “Avoid dogmatically including all levels possible or duplicating token-tuples redundantly. Instead, include only the levels needed to sufficiently describe and distinguish purposeful intent.”
+
+Refer to [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676) by Nathan Curtis for further examples.
+
+Exceptions to the rules described in Nathans's article:
+
+- Property comes before Concept and Sub-concept.
+
+## Resources
+
+### Design tokens taxonomy
+
+- [Material Design 3 Design Tokens](https://m3.material.io/foundations/design-tokens/overview), by Google.
+- [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676), by Nathan Curtis.
+- [Naming Tokens in Design Systems](https://www.figma.com/community/file/1096728307713953219), Figma template by @mconde for Nathan Curtis article.
+- [The many faces of themeable design systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/), by Brad Frost. Managing the different flavors of themeability including brands, sub-brands, white-labeling, themes, and more.
+- [Naming design tokens](https://uxdesign.cc/naming-design-tokens-9454818ed7cb), by Lukas Opperman.
+- [A design token taxonomy for Checkout.com](https://www.gerireid.com/design-token-taxonomy.html), by Geri Reid.
+
+More on contextual modifiers (e.g., `on-accent`, `on-primary`):
+
+- [Minimalist tokens](https://codepen.io/mikemai2awesome/pen/bGMpKWQ/9aa5fa652ea0f810a9649255a60acd26), on Codepen.
+- [Stateful theming](https://speakerdeck.com/csswizardry/4half-methods-for-theming-in-s-css?slide=32)), by Harry Roberts.
+
+### Standards
+
+- [Design Tokens Format Module](https://design-tokens.github.io/community-group/format/) — Design Tokens specification draft by the W3C Design Tokens Community Group.
