@@ -18,7 +18,7 @@ import { Platform, Theme } from "./src/@types/index";
 import setupStyleDictionary from "./src/setupStyleDictionary";
 
 const themes: Theme[] = ["light", "light-hc", "dark", "dark-hc"];
-const platforms: Platform[] = ["web"];
+const platforms: Platform[] = ["web", "ios"];
 
 (async () => {
   for (const theme of themes) {
