@@ -18,6 +18,7 @@ import * as glob from "fast-glob";
 import { Config } from "style-dictionary/types/Config";
 
 import { Theme, Platform } from "./@types";
+import getIOSConfig from "./platformConfigs/getIOSConfig";
 import getWebConfig from "./platformConfigs/getWebConfig";
 
 export default function getStyleDictionaryConfig(
@@ -39,6 +40,9 @@ export default function getStyleDictionaryConfig(
     case "web":
       config.platforms.js = getWebConfig("js", theme);
       config.platforms.css = getWebConfig("css", theme);
+      break;
+    case "ios":
+      config.platforms.iosSwift = getIOSConfig(theme);
       break;
     default:
       throw `Unsupported platform: ${platform}`;

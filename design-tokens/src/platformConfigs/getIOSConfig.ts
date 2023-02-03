@@ -17,30 +17,16 @@ limitations under the License.
 import { Platform } from "style-dictionary/types/Platform";
 import { prefix, Theme } from "../@types";
 
-export default function (target: "js" | "css", theme: Theme): Platform {
-  if (target !== "css" && target !== "js") {
-    throw `Unsupport web platform: ${target}`;
-  }
-
+export default function getIOSConfig(theme: Theme): Platform {
   return {
-    transformGroup: `tokens-${target}`,
+    transformGroup: `tokens-ios`,
     prefix,
-    transforms: [
-      "ts/resolveMath",
-      "ts/size/px",
-      "ts/size/letterspacing",
-      "ts/color/hexrgba",
-      "ts/typography/shorthand",
-      "ts/shadow/shorthand",
-      "attribute/cti",
-      "color/hex",
-      target === "css" ? "name/cti/kebab" : "camelCaseDecimal",
-    ],
-    buildPath: `assets/web/${target}/`,
+    transforms: ["attribute/cti", "color/UIColorSwift", "camelCaseDecimal"],
+    buildPath: `assets/ios/swift/`,
     files: [
       {
-        destination: `${theme}.${target}`,
-        format: target === "css" ? "css/variables" : "javascript/es6",
+        destination: `${theme}.swift`,
+        format: "ios-swift/class.swift",
         options: {
           showFileHeader: false,
           outputReferences: true,
