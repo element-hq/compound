@@ -14,24 +14,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import { Platform } from "style-dictionary/types/Platform";
-import { prefix, Theme } from "../@types";
-
-export default function getIOSConfig(theme: Theme): Platform {
-  return {
-    transformGroup: `tokens-ios`,
-    prefix,
-    transforms: ["attribute/cti", "color/UIColorSwift", "camelCaseDecimal"],
-    buildPath: `assets/ios/swift/`,
-    files: [
-      {
-        destination: `${theme}.swift`,
-        format: "ios-swift/class.swift",
-        options: {
-          showFileHeader: false,
-          outputReferences: true,
-        },
-      },
-    ],
-  };
-}
+export const COMPOUND_TOKENS_NAMESPACE = "cpd";

@@ -19,8 +19,8 @@ import { Named } from "style-dictionary/types/_helpers";
 import { Transform } from "style-dictionary/types/Transform";
 import { registerTransforms } from "@tokens-studio/sd-transforms";
 
-import camelCaseDecimal from "./camelCaseDecimal";
-import getStyleDictionaryConfig from "./getStyleDictionaryConfig";
+import camelCaseDecimal from "./transforms/camelCaseDecimal";
+import { getStyleDictionaryConfig } from "./configs";
 import { Platform, Theme } from "./@types";
 
 export default async function (theme: Theme, platform: Platform) {

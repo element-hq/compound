@@ -15,7 +15,8 @@ limitations under the License.
 */
 
 import { Platform } from "style-dictionary/types/Platform";
-import { prefix, Theme } from "../@types";
+import { COMPOUND_TOKENS_NAMESPACE } from "./utils";
+import { Theme } from "../@types";
 
 export default function (target: "js" | "css", theme: Theme): Platform {
   if (target !== "css" && target !== "js") {
@@ -24,7 +25,7 @@ export default function (target: "js" | "css", theme: Theme): Platform {
 
   return {
     transformGroup: `tokens-${target}`,
-    prefix,
+    prefix: COMPOUND_TOKENS_NAMESPACE,
     transforms: [
       "ts/resolveMath",
       "ts/size/px",
