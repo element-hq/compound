@@ -14,8 +14,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-export type Theme = "light" | "light-hc" | "dark" | "dark-hc";
-
-export type Platform = "web" | "android" | "ios";
-
-// export const prefix = "cpd";
+export const COMPOUND_TOKENS_NAMESPACE = "cpd";
