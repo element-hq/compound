@@ -16,7 +16,7 @@ limitations under the License.
 
 import { Platform } from "style-dictionary/types/Platform";
 import { TransformedToken } from "style-dictionary/types/TransformedToken";
-import { camelCase } from "lodash-es";
+import { camelCase } from "lodash";
 
 /**
  * A transformer to change tokens.0_5x and keep the underscore
