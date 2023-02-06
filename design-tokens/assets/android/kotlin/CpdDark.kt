@@ -7,7 +7,7 @@ package io.element.compound.tokens;
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.*
 
-object CompoundDesignTokens {
+object DarkDesignTokens {
   val cpdColorGreen900 = Color(0xff0e9876)
   val cpdColorGray1400 = Color(0xffeaebee)
   val cpdColorGray1300 = Color(0xffd9dbe1)
