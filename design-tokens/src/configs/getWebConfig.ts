@@ -17,6 +17,8 @@ limitations under the License.
 import { Platform } from "style-dictionary/types/Platform";
 import { COMPOUND_TOKENS_NAMESPACE } from "./utils";
 import { Theme } from "../@types";
+import { File } from "style-dictionary/types/File";
+import _ from "lodash";
 
 export default function (target: "js" | "css", theme: Theme): Platform {
   if (target !== "css" && target !== "js") {
@@ -38,15 +40,47 @@ export default function (target: "js" | "css", theme: Theme): Platform {
       target === "css" ? "name/cti/kebab" : "camelCaseDecimal",
     ],
     buildPath: `assets/web/${target}/`,
-    files: [
+    files: getFilesFormat(theme, target),
+  };
+}
+
+function getFilesFormat(theme: Theme, target: "css" | "js"): File[] {
+  if (target === "js") {
+    return [
       {
-        destination: `${theme}.${target}`,
-        format: target === "css" ? "css/variables" : "javascript/es6",
+        destination: `${_.camelCase(
+          COMPOUND_TOKENS_NAMESPACE + "." + theme
+        )}.js`,
+        format: "javascript/es6",
         options: {
           showFileHeader: false,
           outputReferences: true,
         },
       },
-    ],
-  };
+    ];
+  } else {
+    return [
+      // Generates the theme under a scoped selector
+      // e.g. .cpd-dark-hc { /* ... */ }
+      {
+        destination: `${COMPOUND_TOKENS_NAMESPACE}-${theme}.css`,
+        format: "css/variables",
+        options: {
+          showFileHeader: false,
+          outputReferences: true,
+          selector: `.${COMPOUND_TOKENS_NAMESPACE}-theme-${theme}`,
+        },
+      },
+      // Generates the theme under the :root
+      // This file is to be imported with a media query import
+      {
+        destination: `${COMPOUND_TOKENS_NAMESPACE}-${theme}-mq.css`,
+        format: "css/variables",
+        options: {
+          showFileHeader: false,
+          outputReferences: true,
+        },
+      },
+    ];
+  }
 }
