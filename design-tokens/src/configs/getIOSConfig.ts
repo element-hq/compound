@@ -17,6 +17,7 @@ limitations under the License.
 import { Platform } from "style-dictionary/types/Platform";
 import { COMPOUND_TOKENS_NAMESPACE } from "./utils";
 import { Theme } from "../@types";
+import _ from "lodash";
 
 export default function getIOSConfig(theme: Theme): Platform {
   return {
@@ -26,12 +27,18 @@ export default function getIOSConfig(theme: Theme): Platform {
     buildPath: `assets/ios/swift/`,
     files: [
       {
-        destination: `${theme}.swift`,
+        destination: `${_.upperFirst(
+          _.camelCase(COMPOUND_TOKENS_NAMESPACE + " " + theme)
+        )}.swift`,
         format: "ios-swift/class.swift",
         options: {
           showFileHeader: false,
           outputReferences: true,
         },
+        className:
+          _.upperFirst(COMPOUND_TOKENS_NAMESPACE) +
+          _.upperFirst(_.camelCase(theme)) +
+          "DesignTokens",
       },
     ],
   };

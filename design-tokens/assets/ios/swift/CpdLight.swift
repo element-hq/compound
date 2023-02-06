@@ -1,11 +1,11 @@
 
 //
-// light.swift
+// CpdLight.swift
 //
 
 import SwiftUI
 
-public class  {
+public class CpdLightDesignTokens {
     public static let cpdColorGreen900 = UIColor(red: 0.000, green: 0.478, blue: 0.384, alpha: 1)
     public static let cpdColorGray1400 = UIColor(red: 0.110, green: 0.114, blue: 0.125, alpha: 1)
     public static let cpdColorGray1300 = UIColor(red: 0.165, green: 0.176, blue: 0.200, alpha: 1)

@@ -1,11 +1,11 @@
 
 //
-// dark-hc.swift
+// CpdDarkHc.swift
 //
 
 import SwiftUI
 
-public class  {
+public class CpdDarkHcDesignTokens {
     public static let cpdColorGreen900 = UIColor(red: 0.098, green: 0.745, blue: 0.553, alpha: 1)
     public static let cpdColorGray1400 = UIColor(red: 0.945, green: 0.949, blue: 0.957, alpha: 1)
     public static let cpdColorGray1300 = UIColor(red: 0.918, green: 0.922, blue: 0.933, alpha: 1)
