@@ -12,6 +12,10 @@
     "style dictionary",
     "css"
   ],
+  "files": [
+    "./assets/web/**/*"
+  ],
+  "main": "assets/web/js/index.js",
   "author": "",
   "license": "Apache-2.0",
   "homepage": "https://github.com/vector-im/compound/tree/main/design-tokens",
