@@ -1,14 +1,27 @@
 {
-  "name": "design-tokens",
+  "name": "@vector-im/compound-design-tokens",
   "version": "0.0.1",
-  "description": "",
+  "description": "Compound design tokens",
   "scripts": {
     "build": "ts-node ./build.ts",
     "dev": "http-server ."
   },
-  "keywords": [],
+  "keywords": [
+    "compound",
+    "design tokens",
+    "style dictionary",
+    "css"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/vector-im/compound/tree/main/design-tokens",
+  "bugs": {
+    "url": "https://github.com/vector-im/compound/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vector-im/compound.git"
+  },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^0.3.1",
     "@types/lodash": "^4.14.191",
