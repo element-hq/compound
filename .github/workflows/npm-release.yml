@@ -1,4 +1,4 @@
-name: Release Design Tokens
+name: Release npm package
 on:
   workflow_dispatch:
     inputs:
