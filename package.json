@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/tokens.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -19,14 +19,14 @@
   "homepage": "https://vector-im.github.io/compound",
   "devDependencies": {
     "@babel/core": "^7.19.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack4": "^6.5.16",
-    "@storybook/manager-webpack4": "^6.5.16",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
+    "@babel/preset-env": "^7.20.2",
+    "@storybook/addon-actions": "^7.0.0-beta.52",
+    "@storybook/addon-essentials": "^7.0.0-beta.52",
+    "@storybook/addon-interactions": "^7.0.0-beta.52",
+    "@storybook/addon-links": "^7.0.0-beta.52",
+    "@storybook/react": "^7.0.0-beta.52",
+    "@storybook/react-webpack5": "^7.0.0-beta.52",
+    "@storybook/testing-library": "^0.0.14-next.1",
     "babel-loader": "^9.1.2",
     "chokidar-cli": "^3.0.0",
     "eslint": "^8.32.0",
@@ -36,6 +36,7 @@
     "lodash": "^4.17.21",
     "prettier": "^2.8.3",
     "sharp": "^0.31.0",
+    "storybook": "^7.0.0-beta.52",
     "storybook-addon-designs": "^6.3.1",
     "style-dictionary": "^3.7.1",
     "svg2vectordrawable": "^2.9.1",
