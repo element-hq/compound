@@ -12,38 +12,35 @@ All tokens start with the namespace for the design system, `cds`.
 
 Our design tokens are conceptually divided into three tiers:
 
-- System
-- Reference
+- Base
+- Semantic
 - Components
 
 The top level is global and not aware of context. Subsequent tiers are context-aware, each one being more precise.
 
-System tokens describe plain values, while reference tokens describe their purpose in specific contexts. Component tokens describe the intended use in the context of a specific component.
+Base tokens describe plain values, while semantic tokens describe their purpose in specific contexts. Component tokens describe the intended use in the context of a specific component.
 
 With three kinds of tokens, we can update design decisions globally or apply a change to a single component.
 
-### System
+### Base
 
-Namespace: `sys`
-🔴 TODO: Consider removing namespace.
+Used for global, immutable literal values.
 
-Use for global, immutable literal values.
+Example: `cds.color.blue.800`
 
-### Reference
+### Semantic
 
-Namespace: `ref`
-🔴 TODO: Consider removing namespace.
+Semantic tokens are semantic aliases that map base tokens to specific contexts. They represent the choices in regards to when to use which token.
 
-Reference tokens are semantic aliases that map system tokens to specific contexts. They represent the choices the design system team made in regards to when to use which token.
+It allows us to granularly target and control the mapping of base tokens to specific contexts, decoupling it from other contexts that happen to consume the same base token.
 
-It allows us to granularly target and control the mapping of system tokens to specific contexts, decoupling it from other contexts that happen to consume the same system token.
+Example: `cds.color.background.primary` that points to `cds.color.blue.800`
 
 ### Component
 
-Namespace: `cmp`
-🔴 TODO: Consider removing namespace.
-
 Semantic aliases for mapping tokens to component-specific contexts.
+
+Example: `cds.button.color.background.primary` that points to `cds.color.background.primary`
 
 ## Token taxonomy
 
@@ -54,15 +51,13 @@ Semantic aliases for mapping tokens to component-specific contexts.
 - Theme — Define themes by extending and overriding default tokens. Useful for brands, sub-brands, white-labeling, and color schemes.
   - `ees`
 - (Domain) — Currently unsupported, but reserved for potential future needs. It could be used for specific business units (e.g., `security`).
-- Scope
-  - `sys`, `ref`, `cmp`. 🔴 TODO: Consider removing token scope namespaces.
 
 ### Object
 
 - Group — For targeting the same property across multiple components.
   - `forms` for defining the border color for input controls (text input, select, checkbox, radio input…).
   - `controls` for controls you interact with like form fields and navigation.
-  - `actions` for tageting both buttons and links.
+  - `actions` for targeting both buttons and links.
 - Component
   - `button`, `input`, `checkbox`, `tooltip`, `modal`…
 - Element — For targeting elements within a component, similar to [BEM](https://getbem.com/).
@@ -84,8 +79,8 @@ Semantic aliases for mapping tokens to component-specific contexts.
 
 - Variant — Distinguishes alternative use cases.
   - Intent
-    - `info`, `success`, `warning`, and `cirtical` for `feedback` concept
-    - `conversion`, `positive`, `negative`, and `neutral` for `action`
+    - `info`, `success`, `warning`, and `critical` for `feedback` concept
+    - `conversion`, `positive`, `negative`, and `neutral` for `action` concept
   - Emphasis — Prominence
     - `primary`, `secondary`, and `tertiary` for `action` concept 
 - State — Properties based on interactive states.
@@ -123,15 +118,9 @@ Exceptions to the rules described in Nathans's article:
 
 - [Material Design 3 Design Tokens](https://m3.material.io/foundations/design-tokens/overview), by Google.
 - [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676), by Nathan Curtis.
-- [Naming Tokens in Design Systems](https://www.figma.com/community/file/1096728307713953219), Figma template by @mconde for Nathan Curtis article.
 - [The many faces of themeable design systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/), by Brad Frost. Managing the different flavors of themeability including brands, sub-brands, white-labeling, themes, and more.
 - [Naming design tokens](https://uxdesign.cc/naming-design-tokens-9454818ed7cb), by Lukas Opperman.
 - [A design token taxonomy for Checkout.com](https://www.gerireid.com/design-token-taxonomy.html), by Geri Reid.
-
-More on contextual modifiers (e.g., `on-accent`, `on-primary`):
-
-- [Minimalist tokens](https://codepen.io/mikemai2awesome/pen/bGMpKWQ/9aa5fa652ea0f810a9649255a60acd26), on Codepen.
-- [Stateful theming](https://speakerdeck.com/csswizardry/4half-methods-for-theming-in-s-css?slide=32)), by Harry Roberts.
 
 ### Standards
 
