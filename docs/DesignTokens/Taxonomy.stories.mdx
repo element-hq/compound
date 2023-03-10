@@ -2,55 +2,43 @@ import { Meta } from "@storybook/addon-docs";
 
 <Meta title="Design Tokens Taxonomy" />
 
-# 🚧 WIP
+# Design Tokens Taxonomy — Work in Progress 🛠
 
-## Design system namespace
-
-All tokens start with the namespace for the design system, `cds`.
+🛠 **Work in Progress** — We're iterating and refining the conventions stated here as we work on authoring our design system tokens and components.
 
 ## Token tiers
 
-Our design tokens are conceptually divided into three tiers:
+Our design tokens are conceptually organized into three tiers — base, semantic, and component tokens. The top tier is global and unaware of the intended context of use, while subsequent tiers are aware of context and increasingly more precise about it.
 
-- Base
-- Semantic
-- Components
+- **Base tokens** — Unaware of the intended context of use.
+- **Semantic tokens** — Aware of context and shared across components.
+- **Component tokens** — Aware of context but specific to one component.
 
-The top level is global and not aware of context. Subsequent tiers are context-aware, each one being more precise.
-
-Base tokens describe plain values, while semantic tokens describe their purpose in specific contexts. Component tokens describe the intended use in the context of a specific component.
-
-With three kinds of tokens, we can update design decisions globally or apply a change to a single component.
+With this token architecture, we can update design decisions globally or target changes to a single component.
 
 ### Base
 
-Used for global, immutable literal values.
+Base tokens enumerate the available values in the system, without providing specific directions on how or where to use them. Used for global, literal values. 
 
-Example: `cds.color.blue.800`
+Example: `cds.color.blue.800`, which holds the value `#004ce6`.
 
 ### Semantic
 
-Semantic tokens are semantic aliases that map base tokens to specific contexts. They represent the choices in regards to when to use which token.
+Semantic tokens describe the purpose of tokens in specific contexts. They are aliases to base tokens that add meaning about the different possible use cases for base tokens, by describing where or how they are used. This way we can target each use case indepedently.
 
-It allows us to granularly target and control the mapping of base tokens to specific contexts, decoupling it from other contexts that happen to consume the same base token.
-
-Example: `cds.color.background.primary` that points to `cds.color.blue.800`
+Example: `cds.color.background.primary`, which points to `cds.color.blue.800`.
 
 ### Component
 
-Semantic aliases for mapping tokens to component-specific contexts.
+Component tokens describe the purpose of tokens in a particular component. They are aliases for mapping tokens to component-specific contexts.
 
-Example: `cds.button.color.background.primary` that points to `cds.color.background.primary`
+Example: `cds.button.color.background.primary`, which points to `cds.color.background.primary`.
 
 ## Token taxonomy
 
 ### Namespace
 
-- Design system
-  - `cds`
-- Theme — Define themes by extending and overriding default tokens. Useful for brands, sub-brands, white-labeling, and color schemes.
-  - `ees`
-- (Domain) — Currently unsupported, but reserved for potential future needs. It could be used for specific business units (e.g., `security`).
+All tokens start with the namespace for the design system, `cds`.
 
 ### Object
 
@@ -106,15 +94,13 @@ Example: `cds.button.color.background.primary` that points to `cds.color.backgro
 - For negative values, use a hyphen: `-1`.
 - “Avoid dogmatically including all levels possible or duplicating token-tuples redundantly. Instead, include only the levels needed to sufficiently describe and distinguish purposeful intent.”
 
-Refer to [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676) by Nathan Curtis for further examples.
+Refer to [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676) by Nathan Curtis for further examples, while observing the following exceptions:
 
-Exceptions to the rules described in Nathans's article:
-
-- Property comes before Concept and Sub-concept.
+- “Property” group comes before “Concept and Sub-concept”.
 
 ## Resources
 
-### Design tokens taxonomy
+**Design tokens taxonomy**
 
 - [Material Design 3 Design Tokens](https://m3.material.io/foundations/design-tokens/overview), by Google.
 - [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676), by Nathan Curtis.
@@ -122,6 +108,6 @@ Exceptions to the rules described in Nathans's article:
 - [Naming design tokens](https://uxdesign.cc/naming-design-tokens-9454818ed7cb), by Lukas Opperman.
 - [A design token taxonomy for Checkout.com](https://www.gerireid.com/design-token-taxonomy.html), by Geri Reid.
 
-### Standards
+**Standards**
 
 - [Design Tokens Format Module](https://design-tokens.github.io/community-group/format/) — Design Tokens specification draft by the W3C Design Tokens Community Group.
