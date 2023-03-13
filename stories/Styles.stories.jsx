@@ -6,7 +6,7 @@ import TypographyComponent from "./components/Typography";
 import ColorComponent from "./components/Color";
 
 export default {
-  title: 'Tokens',
+  title: 'Styles/Styles',
   component: SpacingComponent | TypographyComponent | ColorComponent,
 };
 
