@@ -20,25 +20,25 @@ With this token architecture, we can update design decisions globally or target 
 
 Base tokens enumerate the available values in the system, without providing specific directions on how or where to use them. Used for global, literal values. 
 
-Example: `cds.color.blue.800`, which holds the value `#004ce6`.
+Example: `cpd.color.blue.800`, which holds the value `#004ce6`.
 
 ### Semantic
 
 Semantic tokens describe the purpose of tokens in specific contexts. They are aliases to base tokens that add meaning about the different possible use cases for base tokens, by describing where or how they are used. This way we can target each use case indepedently.
 
-Example: `cds.color.background.primary`, which points to `cds.color.blue.800`.
+Example: `cpd.color.background.primary`, which points to `cpd.color.blue.800`.
 
 ### Component
 
 Component tokens describe the purpose of tokens in a particular component. They are aliases for mapping tokens to component-specific contexts.
 
-Example: `cds.button.color.background.primary`, which points to `cds.color.background.primary`.
+Example: `cpd.button.color.background.primary`, which points to `cpd.color.background.primary`.
 
 ## Token taxonomy
 
 ### Namespace
 
-All tokens start with the namespace for the design system, `cds`.
+All tokens start with the namespace for the design system, `cpd`.
 
 ### Object
 
