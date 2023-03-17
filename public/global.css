@@ -1,0 +1,64 @@
+@import url("./fonts.css");
+
+body {
+  font: var(--cpd-font-body-md-regular);
+}
+
+h1 {
+  font: var(--cpd-font-heading-xl-regular)
+}
+
+h2 {
+  font: var(--cpd-font-heading-lg-regular)
+}
+
+h3 {
+  font: var(--cpd-font-heading-md-regular)
+}
+
+h4 {
+  font: var(--cpd-font-heading-sm-regular)
+}
+
+.cpdSpacePreview {
+  height: 1rem;
+  margin: 0 .5rem;
+  position: relative;
+  background: var(--cpd-color-gray-600);
+}
+
+.cpdSpacePreview::after, 
+.cpdSpacePreview::before {
+  content: "";
+  width: .5rem;
+  aspect-ratio: 1 / 1;
+  top: .25rem;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--cpd-color-gray-1400);
+}
+
+.cpdSpacePreview::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.cpdSpacePreview::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.cpdColorScale {
+  display: flex;
+}
+
+.cpdColorPreview {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+}
+
+.cpdColorPreview::after {
+  content: attr(data-scale);
+  mix-blend-mode: difference;
+  filter: invert(1); 
+}
