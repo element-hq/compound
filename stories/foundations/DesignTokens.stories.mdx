@@ -1,0 +1,113 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Foundations/Design Tokens" />
+
+# Design Tokens
+
+🛠 **Work in Progress** — Please note we're iterating and refining the conventions stated here as we work on authoring our design system tokens and components. Breaking changes may be introduced during this initial stage.
+
+## Token tiers
+
+Our design tokens are conceptually organized into three tiers — base, semantic, and component tokens. The top tier is global and unaware of the intended context of use, while subsequent tiers are aware of context and increasingly more precise about it.
+
+- **Base tokens** — Unaware of the intended context of use.
+- **Semantic tokens** — Aware of context and shared across components.
+- **Component tokens** — Aware of context but specific to one component.
+
+With this token architecture, we can update design decisions globally or target changes to a single component.
+
+### Base
+
+Base tokens enumerate the available values in the system, without providing specific directions on how or where to use them. Used for global, literal values. 
+
+Example: `cpd.color.blue.800`, which holds the value `#004ce6`.
+
+### Semantic
+
+Semantic tokens describe the purpose of tokens in specific contexts. They are aliases to base tokens that add meaning about the different possible use cases for base tokens, by describing where or how they are used. This way we can target each use case indepedently.
+
+Example: `cpd.color.background.primary`, which points to `cpd.color.blue.800`.
+
+### Component
+
+Component tokens describe the purpose of tokens in a particular component. They are aliases for mapping tokens to component-specific contexts.
+
+Example: `cpd.button.color.background.primary`, which points to `cpd.color.background.primary`.
+
+## Token taxonomy
+
+### Namespace
+
+All tokens start with the namespace for the design system, `cpd`.
+
+### Object
+
+- Group — For targeting the same property across multiple components.
+  - `forms` for defining the border color for input controls (text input, select, checkbox, radio input…).
+  - `controls` for controls you interact with like form fields and navigation.
+  - `actions` for targeting both buttons and links.
+- Component
+  - `button`, `input`, `checkbox`, `tooltip`, `modal`…
+- Element — For targeting elements within a component, similar to [BEM](https://getbem.com/).
+  - `icon` within a `button` component.
+
+### Base
+
+- Category
+  - `color`, `font`, `border`, `space`, `size`, `shadow`, `elevation`, `opacity`, `breakpoint`, `touch`, `time`
+- Property
+  - `background`, `text`, `border`, and `icon` for `color` category
+  - `family`, `size`, `weight`, `line-height`, and `letter-spacing` for `font` category
+  - `width`, `style`, `radius` for `border` category  
+- Concept and sub-concepts
+  - `feedback`, `action`, and `surface` for `color` category
+  - `display`, `heading` and `body` for `font` category 
+
+### Modifier
+
+- Variant — Distinguishes alternative use cases.
+  - Intent
+    - `info`, `success`, `warning`, and `critical` for `feedback` concept
+    - `conversion`, `positive`, `negative`, and `neutral` for `action` concept
+  - Emphasis — Prominence
+    - `primary`, `secondary`, and `tertiary` for `action` concept 
+- State — Properties based on interactive states.
+  - `default`, `hovered`, `active`/`pressed`, `focused`, `selected`, `visited`, `disabled`,  `error`
+- Scale — Choices within a predefined set of values, like varying size, space, shade, and other options.
+  - Ordinal: t-shirt sizes (`xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`…).
+  - Sequential/stepped/numerical: base 100 (`100`, `200`, `300`…), base 1/index (`0_5`, `1`, `2`, `4`…)
+  - Proportional: `-1x`, `0_5x`, `1x`, `2x`…
+  - Keyword/Named:
+    - `circle`
+    - `regular`, `tight`, `loose`
+    - `regular`, `medium`, `semi-bold`, `bold`
+    - `sans`, `serif`, `mono`
+    - `minimum`
+    - `ease-in`, `ease-out`
+- Mode — Distinguish values across two or more surface/background settings on which elements appear. Use only when there’s a distinction (e.g., color and shadow for dark theme).
+  - `on-light`, `on-dark`, `on-light-hc`, `on-dark-hc`, or any colored surface like `invert`, `on-accent`, `on-primary`, `on-secondary`, `on-surface`.
+
+### Other naming rules
+
+- For compound words, use hyphens to separate the words: `line-height`, `on-primary`, `on-dark-hc`
+- For decimal values, replace the decimal point with an underscore: `0_5` for 0.5.
+- For negative values, use a hyphen: `-1`.
+- “Avoid dogmatically including all levels possible or duplicating token-tuples redundantly. Instead, include only the levels needed to sufficiently describe and distinguish purposeful intent.”
+
+Refer to [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676) by Nathan Curtis for further examples, while observing the following exceptions:
+
+- “Property” group comes before “Concept and Sub-concept”.
+
+## Resources
+
+**Design tokens taxonomy**
+
+- [Material Design 3 Design Tokens](https://m3.material.io/foundations/design-tokens/overview), by Google.
+- [Naming Tokens in Design Systems](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676), by Nathan Curtis.
+- [The many faces of themeable design systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/), by Brad Frost. Managing the different flavors of themeability including brands, sub-brands, white-labeling, themes, and more.
+- [Naming design tokens](https://uxdesign.cc/naming-design-tokens-9454818ed7cb), by Lukas Opperman.
+- [A design token taxonomy for Checkout.com](https://www.gerireid.com/design-token-taxonomy.html), by Geri Reid.
+
+**Standards**
+
+- [Design Tokens Format Module](https://design-tokens.github.io/community-group/format/) — Design Tokens specification draft by the W3C Design Tokens Community Group.
