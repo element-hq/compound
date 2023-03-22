@@ -4,4 +4,73 @@ import { Meta } from "@storybook/addon-docs";
 
 # Accessibility
 
-...
+Designing and building with accessibility in mind is crucial as it ensures all individuals, regardless of abilities, can access and use our products.
+
+Moreover, designing for accessibility is beneficial for everyone. For instance, using clear and concise language and easy-to-use navigation benefits everyone, regardless of abilities.
+
+## Compound Web
+
+On the web, we aim to support the following standards:
+
+### WCAG (Web Content Accessibility Guidelines) 2.1
+
+Published by the W3C, WCAG 2.1 outlines [four principles of accessibility](https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility):
+
+1. **Perceivable:** Information and user interface components must be presentable to users in ways they can perceive.
+2. **Operable:** User interface components and navigation must be operable.
+3. **Understandable:** Information and the operation of user interface must be understandable.
+4. **Robust:** Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.
+
+While also providing guidance on areas such as:
+
+* Text alternatives for non-text content
+* Keyboard accessibility
+* Colour contrast
+* User-friendly forms
+
+We aim to support [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/?levels=aaa).
+
+### WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) 1.2
+
+Compound Web components are built using [Radix](https://www.radix-ui.com/), made to meet guidelines set out in [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/), which itself expands on [WCAG 2.1 Guideline 2.1 Make all functionality available from a keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible).
+
+This means we support:
+
+* **Accessible labels:** Form controls are built using accessible names and controls as laid out by the [WAI-ARIA specification](https://www.w3.org/TR/wai-aria-1.2/#namecalculation).
+* **Keyboard navigation:** Keyboard navigation support in accordance with [WAI-ARIA authoring practises](https://www.w3.org/TR/wai-aria-practices-1.2/).
+* **Focus management:** Logical focus movement as users interact with elements and the interface changes as a result. Moving focus based on normal actions in any context, for example switching focus to the primary button when showing an alert.
+
+### Disproportionate burden
+
+Although Compound aims to be an accessible design system it doesn't guarantee an accessible product. Even once Element Web has adopted Compound, we expect there to be some disproportionate burdens the design system can't solve for. For example:
+
+* Providing closed captioning for live voice and video calls.
+* Improving the accessibility of third party embedded extensions and widgets.
+
+#### Resources
+
+* [W3C - Accessibility fundamentals](https://www.w3.org/WAI/fundamentals/)
+* [W3C - WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG21/)
+* [W3C - WAI-ARIA 1.2 Guidelines](https://www.w3.org/TR/wai-aria-1.2/)
+* [Radix UI - Accessibility primitives](https://www.radix-ui.com/docs/primitives/overview/accessibility)
+
+
+## Compound iOS
+
+_Drafting…_
+
+#### Resources
+
+* [Apple Human Interface Guidelines - Accessibility foundations](https://developer.apple.com/design/human-interface-guidelines/foundations/accessibility)
+* [Apple Developer - Building accessibile apps](https://developer.apple.com/accessibility/)
+
+
+## Compound Android
+
+_Drafting…_
+
+
+#### Resources
+
+* [Material Design - Accessibility overview](https://m3.material.io/foundations/accessible-design/overview)
+* [Android Developers - Accessibility best practises](https://developer.android.com/guide/topics/ui/accessibility)
