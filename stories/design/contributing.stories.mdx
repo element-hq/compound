@@ -1,0 +1,69 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Design/Contributing" />
+
+# Contributing to Compound as a designer
+
+While Compound is in it's nascency, the best way to contribute, suggest or discuss any needs can vary. As systems and guidelines evolve, we'll maintain this page as a simple springboard for contributing to and helping evolve Compound.
+
+While the steps in this page will produce some short term overheads, they'll pay dividends. We'll use the learnings from the first contributions, discussions and suggestions to formalise guidelines which will enable anyone to contribute directly.
+
+To try to minimise disruption in delivery - we're striving to align our roadmap with known epics where possible. If you have new or emerging needs - please let us know as early as you can in our weekly team rituals and by following these guidelines.
+
+### Contributing a colour style
+
+// TODO - Create a Colour style issue template with prompts for (1) Link to working Figma doc (2) Suggested colour style name (3) Relevant timelines - when they'll be moving from ideation to delivery
+
+- Optimise for personal velocity in your designs by using semantic tokens where they exist, and base tokens where they don't
+- If you're confident a new semantic colour style would benefit the wider system and team, then:
+  - Create a GitHub colour style issue in Compound, following the guidelines
+  - We'll then triage, review and if needed reach out for more discussion
+  - When a new semantic colour style is added, we'll let you know in the GitHub issue, and you can:
+    - Port your designs/components to use it easily, by using selecting artboards/components and batch replacing style definitions
+    - Trust Compound will handle theme switching, and that implementations will be mirrored cross-platform
+
+The eventual goal is for designers is for all colour decisions to be formalised in the component sets themselves, with semantic token naming to guarantee consistency.  
+
+### Contributing a typography style
+
+// TODO - Link to Compound | Lobby
+
+- The cross-platform typography styles are quite mature and thoroughly considered, so we don't anticipate needing more in the coming months
+- If you find a need for a new typography style, or want to suggest tweaking an existing one, please let us know by discussing in Compound | Lobby
+
+### Contributing a component
+
+// TODO - Create a Component issue template in GitHub and link to it, asking (1) Link to working Figma doc (2) Relevant timelines - when they'll be moving from ideation to delivery
+
+- Optimise for personal velocity in your designs, drafting local components in your Figma document
+- Once you're confident in your user journeys:
+  - Create a GitHub component issue, following the guidelines and linking to your Figma document(s) leaving your draft designs and components in place.
+  - We'll then triage, review and if needed reach out for more discussion.
+  - When new components are added to the shared Figma team library, we'll let you know so you can adopt them in your designs and collaborate with engineering to build for production.
+
+If we don't think components can be added ahead of the indicated timeline (competing priorities, bandwidth) at the least we'll advise on the most relevant known practises to minimise effort to re-componentise properly later.
+
+Counter-intuitively, native mobile components take the longest to add to Compound, as we need to carefully consider how to override them balancing effort, scalability (e.g. over multiple operating system versions) and accessibility.
+
+### Contributing an icon
+
+// TODO - Add the Material icon grid and guidelines to the custom component section in the linked Compound - Icon drafting Figma
+
+While we iron out initial kinks, to suggest an icon to include in Compound, designers should:
+
+- Optimise for personal velocity while ideating, by using icons from the previous team library, our copy of the [Material UI Rounded icon set in our shared workspace](https://www.figma.com/file/VOQIMYq5WQH5C4ptZ77WsC/Material-Design-Icons-(Community)?node-id=2402%3A2207&t=CocVMe5ak2YeExGi-1), or by drawing and creating new components locally in your Figma document
+- Once you're confident in your design and the use of an icon, paste it in the [Compound - Icon drafting](https://www.figma.com/file/9VUPAN6PjlmqPe1g2s3iPS/Compound---Icon-drafting?node-id=0%3A1&t=zLNda0tcz6UmHK2K-1) Figma document, following the guidelines.
+- **Don't** worry about filing a GitHub issue. We'd like to avoid busywork and action icons quickly where possible, and will just use the Figma comment chain and internal rooms for any discussion. If we can't action them quickly, we may port to a GitHub issue ourselves to track and batch with other icon requests.
+- Then, once the icon is a part of the shared team library in Figma we'll let you know when the icon or icons are integrated. Then:
+    - You can swap replace icon instances in your designs with the newly formed ones in the shared Compound team library.
+    - You can trust they're available consistently and reliably on all platforms when used in development.
+    out the component in your designs. Initially, we may need to collaborate on component composition to balance how we're using spacing all round. 
+
+
+### Anything else
+
+// TODO - Link to Compound | Internal
+
+Great - let's talk! Please raise issues and topics in Compound | Lobby and the weekly team rituals.
+
+// TODO - Automate issues to appear on our board. Walk the board in standups.
