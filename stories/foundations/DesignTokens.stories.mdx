@@ -26,13 +26,13 @@ Example: `cpd.color.blue.800`, which holds the value `#004ce6`.
 
 Semantic tokens describe the purpose of tokens in specific contexts. They are aliases to base tokens that add meaning about the different possible use cases for base tokens, by describing where or how they are used. This way we can target each use case indepedently.
 
-Example: `cpd.color.background.primary`, which points to `cpd.color.blue.800`.
+Example: `cpd.color.bg.primary`, which points to `cpd.color.blue.800`.
 
 ### Component
 
 Component tokens describe the purpose of tokens in a particular component. They are aliases for mapping tokens to component-specific contexts.
 
-Example: `cpd.button.color.background.primary`, which points to `cpd.color.background.primary`.
+Example: `cpd.button.color.bg.primary`, which points to `cpd.color.bg.primary`.
 
 ## Token taxonomy
 
@@ -56,7 +56,7 @@ All tokens start with the namespace for the design system, `cpd`.
 - Category
   - `color`, `font`, `border`, `space`, `size`, `shadow`, `elevation`, `opacity`, `breakpoint`, `touch`, `time`
 - Property
-  - `background`, `text`, `border`, and `icon` for `color` category
+  - `bg`, `text`, `border`, and `icon` for `color` category
   - `family`, `size`, `weight`, `line-height`, and `letter-spacing` for `font` category
   - `width`, `style`, `radius` for `border` category  
 - Concept and sub-concepts
