@@ -11,10 +11,10 @@ This repository contains all the public documentation for Compound.
 
 ## Related projects
 
-- 🎨 [Compound design tokens](github.com/vector-im/compound-design-tokens) – All tokens packaged for platforms to use
-- 📱 [Compound iOS](github.com/vector-im/compound-ios) – iOS components library
-- 🤖 [Compound Android](github.com/vector-im/compound-android) – Android components library
-- 🌐 [Compound Web](github.com/vector-im/compound-web) – Web components library
+- 🎨 [Compound design tokens](https://github.com/vector-im/compound-design-tokens) – All tokens packaged for platforms to use
+- 📱 [Compound iOS](https://github.com/vector-im/compound-ios) – iOS components library
+- 🤖 [Compound Android](https://github.com/vector-im/compound-android) – Android components library
+- 🌐 [Compound Web](https://github.com/vector-im/compound-web) – Web components library
 
 ## Develop
 
