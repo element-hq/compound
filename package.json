@@ -43,7 +43,7 @@
     "tinycolor2": "^1.4.2"
   },
   "dependencies": {
-    "@vector-im/compound-design-tokens": "^0.0.2",
+    "@vector-im/compound-design-tokens": "https://github.com/vector-im/compound-design-tokens#develop",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
