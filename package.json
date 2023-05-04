@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@vector-im/compound-design-tokens": "https://github.com/vector-im/compound-design-tokens#develop",
+    "deepmerge": "^4.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
