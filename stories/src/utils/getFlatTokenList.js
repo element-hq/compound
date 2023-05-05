@@ -1,6 +1,6 @@
 export default function getFlatTokenList(tokens, prefix = "") {
   return Object.entries(tokens).reduce(
-    (memo, [tokenName, tokenDefinition]: any) => {
+    (memo, [tokenName, tokenDefinition]) => {
       if (tokenDefinition.value) {
         memo.push({
           ...tokenDefinition,
@@ -15,6 +15,6 @@ export default function getFlatTokenList(tokens, prefix = "") {
 
       return memo;
     },
-    [] as Array<any>
+    []
   );
 }
