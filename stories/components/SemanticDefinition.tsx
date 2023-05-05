@@ -18,6 +18,8 @@ export default function SemanticDefinition({
             height: "24px",
             borderRadius: "4px",
             backgroundColor: `var(${propertyName})`,
+            border: `1px solid var(--cpd-color-alpha-gray-400)`,
+            boxSizing: "border-box",
           }}
         />
       </td>
