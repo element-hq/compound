@@ -5,11 +5,17 @@ export default function SemanticDefinition({
   tokenType,
   definition,
 }) {
-  const propertyName = `--cpd-color-${tokenType}-${tokenName}`;
+  const propertyName = `--cpd-color-${tokenType}${tokenName}`;
 
   return (
     <tr>
-      <td>{tokenName}</td>
+      <td
+        style={{
+          width: "200px",
+        }}
+      >
+        {tokenType.replace(/\w*-/, "") + tokenName}
+      </td>
       <td>{definition.description}</td>
       <td>
         <div
@@ -23,7 +29,13 @@ export default function SemanticDefinition({
           }}
         />
       </td>
-      <td>{propertyName}</td>
+      <td
+        style={{
+          width: "200px",
+        }}
+      >
+        {propertyName}
+      </td>
     </tr>
   );
 }
