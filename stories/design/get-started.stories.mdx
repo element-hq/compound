@@ -4,14 +4,64 @@ import { Meta } from "@storybook/addon-docs";
 
 # Getting started as a designer
 
-Styles are documented in the [Compound Styles Figma document](https://www.figma.com/file/PpKepmHKGikp33Ql7iivbn/Compound-Styles?node-id=22%3A2763&t=UAtRgYRpQ2xofvM3-1)
+Available styles can be found in the [Compound Styles Figma document](https://www.figma.com/file/PpKepmHKGikp33Ql7iivbn/Compound-Styles?node-id=22%3A2763&t=UAtRgYRpQ2xofvM3-1).
+They are generated from our set of design tokens.
 
-Compound is built on top of design tokens, for convienience you can switch between
-themes using the [Themer Figma plugin](https://www.figma.com/community/plugin/731176732337510831/Themer)
+Themes can be switched using the [Themer Figma plugin](https://www.figma.com/community/plugin/731176732337510831/Themer).
 
-Follow these instructions to [setup themer and start using design tokens in your Figma documents](https://github.com/vector-im/compound-design-tokens/blob/develop/docs/sync-tokens.md#%EF%B8%8F-use-tokens-in-a-figma-document)
+In order to use this plugin, you will need to
 
-## Feedback
+- Get the JSONBin access token in your password manager
+- Input the bin URL: https://api.jsonbin.io/v3/b/6400f859c0e7653a05816945
+
+# Getting started as a design system maintainer
+
+As a design system maintainer you will need to follow the same steps as designers.
+But you will also need to configure the [tokens.studio Figma plugin](https://www.figma.com/community/plugin/843461159747178978)
+that is used to manage design tokens.
+
+## tokens.studio GitHub sync
+
+The design tokens are stored in [vector-im/compound-design-tokens](https://github.com/vector-im/compound-design-tokens)
+and this plugin offers a synchronisation feature with GitHub, [follow these steps to configure it](https://docs.tokens.studio/sync/github).
+
+<table>
+  <tbody>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>Compound Design System</td>
+    </tr>
+    <tr>
+      <th>Repository</th>
+      <td>vector-im/compound-design-tokens</td>
+    </tr>
+    <tr>
+      <th>Branch</th>
+      <td>main</td>
+    </tr>
+    <tr>
+      <th>File path</th>
+      <td>tokens/</td>
+    </tr>
+    <tr>
+      <th>baseUrl</th>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Access token</th>
+      <td>
+        [Create an access
+        token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+# Feedback
 
 If you spotted an issue, think of an enhancement, or spotted that something is missing,
 we would love to hear about it. You can create an issue on the [GitHub Compound repository](https://github.com/vector-im/compound/issues/new)
