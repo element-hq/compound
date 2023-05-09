@@ -6,6 +6,7 @@ import semanticTokens from "@vector-im/compound-design-tokens/tokens/theme-seman
 import semanticThemeTokens from "@vector-im/compound-design-tokens/tokens/theme-semantics.json";
 
 import SemanticDefinition from "../components/SemanticDefinition";
+import getFlatTokenList from "../src/utils/getFlatTokenList";
 
 <Meta title="Design/Semantic tokens" />
 
@@ -14,41 +15,27 @@ import SemanticDefinition from "../components/SemanticDefinition";
 { Object.entries(merge(semanticTokens, semanticThemeTokens).color).map(([name, tokens]) => {
 return <div key={name}>
 
+{ console.log() }
+
 <h2>{name}</h2>
 <table>
   <thead>
-    <tr>
+    <tr style={{ textAlign: "left" }}>
       <th>Name</th>
       <th>Description</th>
-      <th>Value</th>
-      <th>Variable</th>
+      <th>Preview</th>
+      <th>CSS Variable</th>
     </tr>
   </thead>
   <tbody>
-    {Object.entries(tokens).map(([tokenName, tokenDefinition]) => {
-      // We can have multiple nesting levels
-      // If we have access to the value property we know we've encountered a
-      // token definition
-      return tokenDefinition.value ? (
+    {getFlatTokenList(tokens, `${name}-`).map((definition) => {
+      return (
         <SemanticDefinition
-          key={tokenName}
-          tokenName={tokenName}
-          tokenType={name}
-          definition={tokenDefinition}
+          key={definition.tokenName}
+          tokenName={definition.tokenName}
+          tokenType={definition.prefix}
+          definition={definition}
         />
-      ) : (
-        Object.entries(tokenDefinition).map(
-          ([tokenSubname, tokenDefinition]) => {
-            return (
-              <SemanticDefinition
-                key={tokenName}
-                tokenName={`${tokenName}-${tokenSubname}`}
-                tokenType={name}
-                definition={tokenDefinition}
-              />
-            );
-          }
-        )
       );
     })}
   </tbody>
