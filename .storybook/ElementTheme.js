@@ -1,8 +1,5 @@
 const { create } =  require('@storybook/theming/create');
-
 const cpdLight = require('@vector-im/compound-design-tokens/assets/web/js/cpdLight');
-
-console.error(cpdLight.cpdColorTextPrimary);
 
 module.exports = create({
     base: 'light',
@@ -11,17 +8,17 @@ module.exports = create({
     
     brandTitle: 'Compound',
     brandUrl: 'https://vector-im.github.io/compound/',
-    brandImage: 'https://element.io/images/logo-ele-secondary.svg',
+    brandImage: '/logo.svg',
     brandTarget: '_self',
     
     //
     colorPrimary: cpdLight.cpdColorTextPrimary,
-    colorSecondary: cpdLight.cpdColorTextSecondary,
+    colorSecondary: cpdLight.cpdColorBgActionPrimaryRest,
     
     // UI
     appBg: cpdLight.cpdColorBgCanvasDefault,
     appContentBg: cpdLight.cpdColorBgCanvasDefault,
-    appBorderColor: cpdLight.cpdColorBorderInfoSubtle,
+    appBorderColor: cpdLight.cpdColorBorderInteractiveSecondary,
     appBorderRadius: 4,
     // Text colors
     textColor: cpdLight.cpdColorTextPrimary,
