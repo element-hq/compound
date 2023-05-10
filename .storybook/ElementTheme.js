@@ -6,46 +6,34 @@ console.error(cpdLight.cpdColorTextPrimary);
 
 module.exports = create({
     base: 'light',
+    fontBase: '"Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif',
+    fontCode: 'Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace',
+    
     brandTitle: 'Compound',
     brandUrl: 'https://vector-im.github.io/compound/',
     brandImage: 'https://element.io/images/logo-ele-secondary.svg',
     brandTarget: '_self',
-
-
-    /*
-    base: 'light',
-    // Typography
-    fontBase: '"Open Sans", sans-serif',
-    fontCode: 'monospace',
-
-    brandTitle: 'My custom Storybook',
-    brandUrl: 'https://example.com',
-    brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
-    brandTarget: '_self',
-
+    
     //
-    colorPrimary: '#3A10E5',
-    colorSecondary: '#585C6D',
-
+    colorPrimary: cpdLight.cpdColorTextPrimary,
+    colorSecondary: cpdLight.cpdColorTextSecondary,
+    
     // UI
-    appBg: '#ffffff',
-    appContentBg: '#ffffff',
-    appBorderColor: '#585C6D',
+    appBg: cpdLight.cpdColorBgCanvasDefault,
+    appContentBg: cpdLight.cpdColorBgCanvasDefault,
+    appBorderColor: cpdLight.cpdColorBorderInfoSubtle,
     appBorderRadius: 4,
-
     // Text colors
-    textColor: '#10162F',
-    textInverseColor: '#ffffff',
-
+    textColor: cpdLight.cpdColorTextPrimary,
+    textInverseColor: cpdLight.cpdColorTextOnSolidPrimary,
     // Toolbar default and active colors
-    barTextColor: '#9E9E9E',
-    barSelectedColor: '#585C6D',
-    barBg: '#ffffff',
-
+    barTextColor: cpdLight.cpdColorTextPrimary,
+    barSelectedColor: cpdLight.cpdColorTextInfoPrimary,
+    barBg: cpdLight.cpdColorBgCanvasDefault,
     // Form colors
-    inputBg: '#ffffff',
-    inputBorder: '#10162F',
-    inputTextColor: '#10162F',
-    inputBorderRadius: 2,
-    */
+    inputBg: cpdLight.cpdColorBgCanvasDefault,
+    inputBorder: cpdLight.cpdColorBorderInteractivePrimary,
+    inputTextColor: cpdLight.cpdColorTextActionPrimary,
+
+    inputBorderRadius: 32,
 });
