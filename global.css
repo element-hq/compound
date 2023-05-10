@@ -43,22 +43,25 @@ h4 {
   transform: translateX(-100%);
 }
 
-.cpdSpacePreview::after {
-  right: 0;
-  transform: translateX(100%);
-}
-
-.cpdColorScale {
+.palette {
   display: flex;
+  flex-direction: row;
 }
 
 .cpdColorPreview {
-  flex: 1;
+  width: 32px;
   aspect-ratio: 1 / 1;
+  float: left;
 }
 
-.cpdColorPreview::after {
-  content: attr(data-scale);
-  mix-blend-mode: difference;
-  filter: invert(1);
+.color-dot {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.color-palette-preview {
+  flex-direction: row;
+  display: flex;
+  gap: 16px;
 }
