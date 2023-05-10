@@ -9,14 +9,6 @@ export default function SemanticDefinition({
 
   return (
     <tr>
-      <td
-        style={{
-          width: "200px",
-        }}
-      >
-        {tokenType.replace(/\w*-/, "") + tokenName}
-      </td>
-      <td>{definition.description}</td>
       <td>
         <div
           style={{
@@ -29,6 +21,14 @@ export default function SemanticDefinition({
           }}
         />
       </td>
+      <td
+        style={{
+          width: "200px",
+        }}
+      >
+        {tokenType.replace(/\w*-/, "") + tokenName}
+      </td>
+      <td>{definition.description}</td>
       <td
         style={{
           width: "200px",

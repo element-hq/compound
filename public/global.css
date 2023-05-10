@@ -46,6 +46,7 @@ h4 {
 .palette {
   display: flex;
   flex-direction: row;
+  margin-top: 12px;
 }
 
 .cpdColorPreview {

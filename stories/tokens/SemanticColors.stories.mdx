@@ -8,9 +8,9 @@ import semanticThemeTokens from "@vector-im/compound-design-tokens/tokens/theme-
 import SemanticDefinition from "../components/SemanticDefinition";
 import getFlatTokenList from "../src/utils/getFlatTokenList";
 
-<Meta title="Design/Semantic tokens" />
+<Meta title="Tokens/Semantic Colors" />
 
-<h1>Semantic tokens</h1>
+<h1>Semantic Color</h1>
 
 { Object.entries(merge(semanticTokens, semanticThemeTokens).color).map(([name, tokens]) => {
 return <div key={name}>
@@ -21,9 +21,9 @@ return <div key={name}>
 <table>
   <thead>
     <tr style={{ textAlign: "left" }}>
+      <th></th>
       <th>Name</th>
       <th>Description</th>
-      <th>Preview</th>
       <th>CSS Variable</th>
     </tr>
   </thead>
