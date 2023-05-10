@@ -34,7 +34,7 @@ export const parameters = {
       h5: ({ children }) => <h5 style={{ font: "var(--cpd-font-body-lg-semibold)" }}>{children}</h5>,
       h6: ({ children }) => <h6 style={{ font: "var(--cpd-font-body-md-semibold)" }}>{children}</h6>,
       li: ({ children, }) => <li style={{ font: "var(--cpd-font-body-md-regular" }}>{children}</li>,
-      a: ({ children }) => <a style={{
+      a: ({ children, ...props }) => <a {...props} style={{
         color: "var(--cpd-color-text-action-accent)",
         font: "var(--cpd-font-body-md-regular",
         textDecoration: "underline",
