@@ -5,34 +5,34 @@ body {
 }
 
 h1 {
-  font: var(--cpd-font-heading-xl-regular)
+  font: var(--cpd-font-heading-xl-semibold) !important;
 }
 
 h2 {
-  font: var(--cpd-font-heading-lg-regular)
+  font: var(--cpd-font-heading-lg-semibold) !important;
 }
 
 h3 {
-  font: var(--cpd-font-heading-md-regular)
+  font: var(--cpd-font-heading-md-semibold) !important;
 }
 
 h4 {
-  font: var(--cpd-font-heading-sm-regular)
+  font: var(--cpd-font-heading-sm-semibold) !important;
 }
 
 .cpdSpacePreview {
   height: 1rem;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   position: relative;
   background: var(--cpd-color-gray-600);
 }
 
-.cpdSpacePreview::after, 
+.cpdSpacePreview::after,
 .cpdSpacePreview::before {
   content: "";
-  width: .5rem;
+  width: 0.5rem;
   aspect-ratio: 1 / 1;
-  top: .25rem;
+  top: 0.25rem;
   position: absolute;
   border-radius: 50%;
   background: var(--cpd-color-gray-1400);
@@ -60,5 +60,5 @@ h4 {
 .cpdColorPreview::after {
   content: attr(data-scale);
   mix-blend-mode: difference;
-  filter: invert(1); 
+  filter: invert(1);
 }
