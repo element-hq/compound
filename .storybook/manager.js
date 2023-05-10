@@ -1,4 +1,4 @@
-const { addons } = require('@storybook/addons');
+const { addons } = require('@storybook/manager-api');
 const ElementTheme = require('./ElementTheme');
 
 addons.setConfig({
