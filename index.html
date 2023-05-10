@@ -46,10 +46,49 @@
     
     <link href="./sb-addons/interactions-8/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/designs-9/register-bundle.js" rel="modulepreload" />
-    
-    <link href="./sb-addons/storybook-10/manager-bundle.js" rel="modulepreload" />
-      <link href="/favicon.png" rel="shortcut icon" type="image/x-icon"> 
+    <link href="./sb-addons/storybook-9/manager-bundle.js" rel="modulepreload" />
+      <link href="/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /*
+    CSS for Storybook UI 
+  */
+
+  .os-viewport::after {
+    background: url(/globe.svg);
+    background-size: contain;
+    content: "";
+    display: block;
+    width: 512px;
+    filter: blur(512px);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .12;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  :is(.sidebar-item, .search-result-item) svg {
+    color: var(--cpd-color-icon-primary);
+    display: none;;
+  }
+
+  .sidebar-subheading,
+  .search-result-recentlyOpened {
+    color: var(--cpd-color-text-primary) !important;
+    letter-spacing: 0 !important;
+    font: inherit !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+
+</style>
+ 
 
     <style>
       #storybook-root[hidden] {
@@ -135,9 +174,7 @@
       
       import './sb-addons/interactions-8/manager-bundle.js';
       
-      import './sb-addons/designs-9/register-bundle.js';
-      
-      import './sb-addons/storybook-10/manager-bundle.js';
+      import './sb-addons/storybook-9/manager-bundle.js';
       
     </script>
 
