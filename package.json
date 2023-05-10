@@ -40,14 +40,12 @@
     "prettier": "^2.8.3",
     "sharp": "^0.31.0",
     "storybook": "^7.0.10",
-    "storybook-addon-designs": "^6.3.1",
     "style-dictionary": "^3.7.1",
     "svg2vectordrawable": "^2.9.1",
     "tinycolor2": "^1.4.2"
   },
   "dependencies": {
     "@vector-im/compound-design-tokens": "https://github.com/vector-im/compound-design-tokens#develop",
-    "@vector-im/compound-web": "https://github.com/vector-im/compound-web#main",
     "deepmerge": "^4.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

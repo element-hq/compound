@@ -3,7 +3,7 @@
 import '!style-loader!css-loader!@vector-im/compound-design-tokens/assets/web/css/compound-design-tokens.css';
 import '!style-loader!css-loader!../public/global.css';
 
-import { Body, H1, H2, H3, H4, H5, H6 } from "@vector-im/compound-web";
+// import { Body, H1, H2, H3, H4, H5, H6 } from "@vector-im/compound-web";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -26,17 +26,19 @@ export const parameters = {
      * for a list of the overridables components
      */
     components: {
-      p: Body,
-      h1: H1,
-      h2: H2,
-      h3: H3,
-      h4: H4,
-      h5: H5,
-      h6: H6,
-      li: ({ children, ...props }) => <Body {...props} as="li">{children}</Body>,
-      a: ({ children, ...props }) => <Body {...props} as="a" style={{
-        color: "var(--cpd-color-text-action-accent)"
-      }}>{children}</Body>
+      p: ({ children }) => <p style={{ font: "var(--cpd-font-body-md-regular)" }}>{children}</p>,
+      h1: ({ children }) => <h1 style={{ font: "var(--cpd-font-heading-xl-semibold)" }}>{children}</h1>,
+      h2: ({ children }) => <h2 style={{ font: "var(--cpd-font-heading-lg-semibold)" }}>{children}</h2>,
+      h3: ({ children }) => <h3 style={{ font: "var(--cpd-font-heading-md-semibold)" }}>{children}</h3>,
+      h4: ({ children }) => <h4 style={{ font: "var(--cpd-font-heading-sm-semibold)" }}>{children}</h4>,
+      h5: ({ children }) => <h5 style={{ font: "var(--cpd-font-body-lg-semibold)" }}>{children}</h5>,
+      h6: ({ children }) => <h6 style={{ font: "var(--cpd-font-body-md-semibold)" }}>{children}</h6>,
+      li: ({ children, }) => <li style={{ font: "var(--cpd-font-body-md-regular" }}>{children}</li>,
+      a: ({ children }) => <a style={{
+        color: "var(--cpd-color-text-action-accent)",
+        font: "var(--cpd-font-body-md-regular",
+        textDecoration: "underline",
+      }}>{children}</a>
     },
   },
 }
