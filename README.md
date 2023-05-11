@@ -7,7 +7,7 @@
 [Compound](https://vector-im.github.io/compound/?path=/docs/overview--docs) is the work-in-progress
 design system for the Element applications.
 
-This repository contains all the public documentation for Compound.
+This repository contains all the public documentation for Compound...
 
 ## Related projects
 
