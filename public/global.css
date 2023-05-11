@@ -43,6 +43,11 @@ h4 {
   transform: translateX(-100%);
 }
 
+.cpdSpacePreview::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
 .palette {
   display: flex;
   flex-direction: row;
