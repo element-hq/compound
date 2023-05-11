@@ -1,0 +1,43 @@
+import { Meta } from "@storybook/addon-docs";
+import * as cpdLight from "@vector-im/compound-design-tokens/assets/web/js/cpdLight";
+
+import SemanticTable from "../components/SemanticTable";
+import sortTshirtSize from "../src/utils/sortTshirtSize";
+
+<Meta title="Tokens/Typography" />
+
+# Typography
+
+## Body
+
+<SemanticTable
+  tokens={Object.keys(cpdLight)
+    .filter((name) => {
+      return name.includes("FontBody");
+    })
+    .sort(sortTshirtSize)
+    .map((name) => {
+      return {
+        preview: () => <span style={{ font: cpdLight[name] }}>Aa</span>,
+        name,
+        variable: cpdLight[name],
+      };
+    })}
+/>
+
+## Heading
+
+<SemanticTable
+  tokens={Object.keys(cpdLight)
+    .filter((name) => {
+      return name.includes("FontHeading");
+    })
+    .sort(sortTshirtSize)
+    .map((name) => {
+      return {
+        preview: () => <span style={{ font: cpdLight[name] }}>Aa</span>,
+        name,
+        variable: cpdLight[name],
+      };
+    })}
+/>
