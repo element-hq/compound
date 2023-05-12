@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/vector-im/compound/issues"
   },
-  "homepage": "https://vector-im.github.io/compound",
+  "homepage": "https://compound.element.io",
   "devDependencies": {
     "@babel/core": "^7.19.0",
     "@babel/preset-env": "^7.20.2",

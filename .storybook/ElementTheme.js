@@ -7,7 +7,7 @@ module.exports = create({
     fontCode: 'Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace',
     
     brandTitle: 'Compound',
-    brandUrl: 'https://vector-im.github.io/compound/',
+    brandUrl: 'https://compound.element.io',
     brandImage: '/logo.svg',
     brandTarget: '_self',
     

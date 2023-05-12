@@ -2,9 +2,9 @@
 
 # Compound
 
-[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://vector-im.github.io/compound/) [![](https://img.shields.io/github/license/vector-im/compound)](https://github.com/vector-im/compound/blob/main/LICENSE)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://compound.element.io) [![](https://img.shields.io/github/license/vector-im/compound)](https://github.com/vector-im/compound/blob/main/LICENSE)
 
-[Compound](https://vector-im.github.io/compound/?path=/docs/overview--docs) is the work-in-progress
+[Compound](https://compound.element.io) is the work-in-progress
 design system for the Element applications.
 
 This repository contains all the public documentation for Compound.
