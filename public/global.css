@@ -71,3 +71,23 @@ h4 {
   display: flex;
   gap: 16px;
 }
+
+.cpdIconPreview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cpdIconPreview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cpdIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+}

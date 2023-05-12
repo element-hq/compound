@@ -1,0 +1,24 @@
+import { Meta } from "@storybook/addon-docs";
+
+import icons from "@vector-im/compound-design-tokens/icons/$icons.json";
+
+<Meta title="Tokens/Icons" />
+
+# Icons
+
+<div className="cpdIconPreview">
+  {Object.keys(icons.icon).map((iconName) => (
+    <div className="cpdIcon" key={iconName}>
+      <span
+        style={{
+          width: "24px",
+          height: "24px",
+          display: "block",
+          background: `var(--cpd-icon-${iconName})`,
+          backgroundSize: "contain",
+        }}
+      />
+      {iconName}
+    </div>
+  ))}
+</div>
