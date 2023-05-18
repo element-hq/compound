@@ -1,6 +1,7 @@
 ---
 name: New component
-about: Add an issue to track adding a new component to Compound
+about: Add an issue to track [adding a new component](https://compound.element.io/?path=/docs/design-contributing--docs)
+  to Compound
 title: ''
 labels: T-New-Component
 assignees: ''
@@ -10,7 +11,7 @@ assignees: ''
 <!-- Please only fill out this issue after you've followed the guidance on [contributing a component](https://compound.element.io/?path=/docs/design-contributing--docs) -->
 
 ### Component name
-<!-- Add the agreed name for the component below. If it's not agreed yet - feel free to suggest and we'll edit this later. -->
+<!-- Add the agreed name for the component below. Feel free to suggest and we'll edit this later. -->
 _Component name..._
 
 ### Figma link
