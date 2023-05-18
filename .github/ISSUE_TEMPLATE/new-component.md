@@ -1,14 +1,13 @@
 ---
 name: New component
-about: Add an issue to track [adding a new component](https://compound.element.io/?path=/docs/design-contributing--docs)
-  to Compound
+about: Add an issue to track adding a new component to Compound
 title: ''
 labels: T-New-Component
 assignees: ''
 
 ---
 
-<!-- Please only fill out this issue after you've followed the guidance on [contributing a component](https://compound.element.io/?path=/docs/design-contributing--docs) -->
+<!-- Please only fill out this issue after you've followed the guidance on: contributing a component: https://compound.element.io/?path=/docs/design-contributing--docs -->
 
 ### Component name
 <!-- Add the agreed name for the component below. Feel free to suggest and we'll edit this later. -->
