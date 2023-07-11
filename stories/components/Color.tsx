@@ -40,26 +40,45 @@ const scales = [
 
 function Palette({ name }: { name: string }) {
   return (
-    <div className="palette">
-      <span
-        style={{
-          lineHeight: "32px",
-          width: "150px",
-          float: "left",
-        }}
-      >
-        {name}
-      </span>
-      {scales.map((scale) => (
-        <div
-          key={scale}
+    <>
+      <table id={name}>
+        <tr>
+          <th colSpan={3}>{name}</th>
+        </tr>
+        <tr>
+          <th>Swatch</th>
+          <th>Hue</th>
+          <th>Variable</th>
+        </tr>
+        {scales.map((scale) => (
+          <tr key={scale}>
+            <td>
+              <div
+                style={{
+                  backgroundColor: (cpdLight as any)[`cpdColor${name}${scale}`],
+                }}
+                className="cpdColorPreview"
+              />
+            </td>
+            <td>{scale}</td>
+            <td>
+              <code>
+                --cpd-color-{name.toLowerCase()}-{scale}
+              </code>
+            </td>
+          </tr>
+        ))}
+      </table>
+      <div className="palette">
+        <span
           style={{
-            backgroundColor: (cpdLight as any)[`cpdColor${name}${scale}`],
+            lineHeight: "32px",
+            width: "150px",
+            float: "left",
           }}
-          className="cpdColorPreview"
-        />
-      ))}
-    </div>
+        ></span>
+      </div>
+    </>
   );
 }
 
@@ -72,7 +91,8 @@ export default function ({
     <>
       <div className="color-palette-preview">
         {palette.map(({ name, preview }) => (
-          <div
+          <a
+            href={`#${name}`}
             key={name}
             className="color-dot"
             style={{
