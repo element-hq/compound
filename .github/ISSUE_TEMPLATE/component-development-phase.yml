@@ -1,0 +1,35 @@
+name: Component development
+description: Track platform implementation of a component
+title:  " "
+labels: ["T-Component-Development"]
+body:
+  - type: input
+    id: figma_doc
+    attributes:
+      label: Figma document
+      description: Link to the figma page showing the component
+      placeholder: ex. https://www.figma.com/file/...
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Platform
+      options:
+        - Web
+        - iOS
+        - Android
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: " "
+      value: "```[tasklist]
+        # Develop phase
+        - [ ] Component has unit tests
+        - [ ] Component has visual regression tests
+        - [ ] Component passes accessibility requirements
+        - [ ] Component is documented in component library
+        ```"
+    validations:
+      required: true

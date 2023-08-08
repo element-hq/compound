@@ -1,0 +1,35 @@
+name: Component design
+description: Track platform design of a component
+title:  " "
+labels: ["T-Component-Design"]
+body:
+  - type: input
+    id: figma_doc
+    attributes:
+      label: Figma document
+      description: Link to the figma page showing the component
+      placeholder: ex. https://www.figma.com/file/...
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Platform
+      options:
+        - Web
+        - iOS
+        - Android
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: " "
+      value: "```[tasklist]
+        # Design phase
+        - [ ] Component exists on Figma
+        - [ ] Component is documented in the component library
+        - [ ] Component is tested for theming
+        - [ ] Component shareout for designers
+        ```"
+    validations:
+      required: true
