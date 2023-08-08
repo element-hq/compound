@@ -1,9 +1,10 @@
 ---
 name: New component epic
 about: Creates an epic for a cross platform Compound component
-title: ""
+title: ''
 labels: T-Epic
-assignees: ""
+assignees: ''
+
 ---
 
 <!-- Please only fill out this issue after you've followed the guidance on: contributing a component: https://compound.element.io/?path=/docs/design-contributing--docs -->
