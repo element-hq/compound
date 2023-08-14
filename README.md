@@ -26,3 +26,13 @@ Once installed, run the following command at the root of this project
 ```
 yarn && yarn storybook
 ```
+## The board
+
+The core team uses [this board]([url](https://github.com/orgs/vector-im/projects/52/)https://github.com/orgs/vector-im/projects/52/) to track work, using the columns for:
+
+- 'New': New or draft issues.
+- 'Backlog': Issue backlog, triaged in priority order.
+- 'Triaged': Committed tasks, triaged in priority order.
+- 'In progress': In progress issues. Issues must have an assignee, and can have multiple.
+- 'Blocked': Progress blocked. Raise during standups.
+- 'In review' & 'Done'
