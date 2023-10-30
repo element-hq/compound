@@ -13,7 +13,7 @@ assignees: ''
 
 # Platform
 
-- ... <!-- Web, iOS, Android. Add the corresping label to the issue (i.e `P-Web` for Web) -->
+- ... <!-- Web, iOS, Android. Add the corresponding label to the issue (i.e `P-Web` for Web) -->
 
 ```[tasklist]
 # Design phase
