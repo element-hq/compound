@@ -100,10 +100,15 @@ h4 {
   }
 }
 
-.cpdIcon {
+.cpdIconItem {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
   padding: 8px;
+}
+
+.cpdIcon {
+  height: 32px;
+  width: 32px;
 }
