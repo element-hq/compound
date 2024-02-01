@@ -9,7 +9,7 @@
     "jsx": "react",
 
     /* Modules */
-    "module": "commonjs" /* Specify what module code is generated. */,
+    "module": "es2022" /* Specify what module code is generated. */,
 
     /* Emit */
     "declaration": true,
@@ -23,6 +23,7 @@
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
     "rootDir": "./",
+    "types": ["vite/client"],
 
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
