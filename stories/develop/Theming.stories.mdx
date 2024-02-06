@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Develop/Theming" />
+
+# Theming
+
+The default set of design tokens provided by Compound contains some choices specific to Element's brand, which our users and customers may want to change to meet their needs. For this reason we allow Compound to be themed with custom sets of semantic tokens.
+
+## Web
+
+On Web, you can override any semantic token by redefining that token in the `custom` [cascade layer](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) provided by the [design tokens package](https://github.com/vector-im/compound-design-tokens/tree/develop/assets/web). This example demonstrates how you would change the `color.icon.accent-tertiary` token to blue, rather than Element's default green:
+
+```css
+@import "@vector-im/compound-design-tokens/assets/web/css/compound-design-tokens.css" layer(compound);
+
+@layer compound.custom {
+  :root, [class*="cpd-theme-"] {
+    --cpd-color-icon-accent-tertiary: var(--cpd-color-blue-800);
+  }
+}
+```
+
+As long as you use the provided layer, this ensures that future internal changes to the package will not cause conflicts in selector specificity.
