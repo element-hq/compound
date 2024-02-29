@@ -2703,8 +2703,8 @@
     eslint-visitor-keys "^3.3.0"
 
 "@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^1.0.0":
-  version "1.0.0"
-  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/e7fb20f8d38821a7c3082d26d2f0f097731d776c"
+  version "1.1.1"
+  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/c3fff1f2b042295cd5f4bcf8d4fe68ec47ca4061"
   dependencies:
     svg2vectordrawable "^2.9.1"
 
