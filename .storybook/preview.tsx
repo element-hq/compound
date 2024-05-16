@@ -16,8 +16,7 @@
 
 import React from "react";
 
-import "!style-loader!css-loader!@vector-im/compound-design-tokens/assets/web/css/compound-design-tokens.css";
-import "!style-loader!css-loader!../public/global.css";
+import "@vector-im/compound-design-tokens/assets/web/css/compound-design-tokens.css";
 
 // import { Body, H1, H2, H3, H4, H5, H6 } from "@vector-im/compound-web";
 
