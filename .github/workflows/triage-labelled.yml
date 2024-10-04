@@ -1,0 +1,21 @@
+name: Move labelled issues to the correct projects
+
+on:
+    issues:
+        types: [labeled]
+    workflow_call:
+        secrets:
+            ELEMENT_BOT_TOKEN:
+                required: true
+
+jobs:
+    web:
+        name: Add issues labelled for the web platform to the web triage project
+        runs-on: ubuntu-latest
+        if: >
+            contains(github.event.issue.labels.*.name, 'P-Web')
+        steps:
+          - uses: actions/add-to-project@main
+            with:
+                project-url: https://github.com/orgs/element-hq/projects/120
+                github-token: ${{ secrets.ELEMENT_BOT_TOKEN }}
