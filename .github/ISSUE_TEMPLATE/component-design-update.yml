@@ -1,0 +1,43 @@
+name: Component design or behaviour change
+description: Track implementation of design update to an existing Compound component
+title: |
+    Design update: [PLATFORM] [COMPONENT]
+labels: [T-Enhancement, X-Design-Change]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              This template is intended for designers to request design changes in components already implemented in
+              Compound Web, Android or iOS.
+              If you would like to request a new component, please use the new component template.
+              If you are not a designer and would like to request a new component or a change to an existing component,
+              please use the enhancement template.
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+          description: |
+            What components and variants are affected.
+            Detailed changelog (changed, added, removed)
+            Screenshots
+          placeholder: Describe the changes
+      validations:
+          required: true
+    - type: input
+      id: figma
+      attributes:
+          label: Figma link
+      validations:
+          required: true
+    - type: dropdown
+      id: platform
+      attributes:
+          label: Platform
+          description: |
+              If this change should be applied to multiple platforms, please create multiple issues
+          options:
+              - "Web"
+              - "iOS"
+              - "android"
+      validations:
+          required: true
