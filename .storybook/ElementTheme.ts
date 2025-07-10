@@ -5,7 +5,7 @@
  * Please see LICENSE files in the repository root for full details.
  */
 
-import { create } from "@storybook/theming/create";
+import { create } from "storybook/theming/create";
 import * as cpdLight from "@vector-im/compound-design-tokens/assets/web/js/cpdLight";
 
 export default create({

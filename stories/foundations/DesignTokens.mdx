@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Foundations/Design Tokens" />
 
@@ -18,7 +18,7 @@ With this token architecture, we can update design decisions globally or target 
 
 ### Base
 
-Base tokens enumerate the available values in the system, without providing specific directions on how or where to use them. Used for global, literal values. 
+Base tokens enumerate the available values in the system, without providing specific directions on how or where to use them. Used for global, literal values.
 
 Example: `cpd.color.blue.800`, which holds the value `#004ce6`.
 
@@ -58,10 +58,10 @@ All tokens start with the namespace for the design system, `cpd`.
 - Property
   - `bg`, `text`, `border`, and `icon` for `color` category
   - `family`, `size`, `weight`, `line-height`, and `letter-spacing` for `font` category
-  - `width`, `style`, `radius` for `border` category  
+  - `width`, `style`, `radius` for `border` category
 - Concept and sub-concepts
   - `feedback`, `action`, and `surface` for `color` category
-  - `display`, `heading` and `body` for `font` category 
+  - `display`, `heading` and `body` for `font` category
 
 ### Modifier
 
@@ -70,7 +70,7 @@ All tokens start with the namespace for the design system, `cpd`.
     - `info`, `success`, `warning`, and `critical` for `feedback` concept
     - `conversion`, `positive`, `negative`, and `neutral` for `action` concept
   - Emphasis — Prominence
-    - `primary`, `secondary`, and `tertiary` for `action` concept 
+    - `primary`, `secondary`, and `tertiary` for `action` concept
 - State — Properties based on interactive states.
   - `default`, `hovered`, `active`/`pressed`, `focused`, `selected`, `visited`, `disabled`,  `error`
 - Scale — Choices within a predefined set of values, like varying size, space, shade, and other options.
