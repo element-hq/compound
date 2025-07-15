@@ -5,7 +5,7 @@
  * Please see LICENSE files in the repository root for full details.
  */
 
-import { addons } from "@storybook/manager-api";
+import { addons } from "storybook/manager-api";
 import ElementTheme from "./ElementTheme";
 
 addons.setConfig({

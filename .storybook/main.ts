@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
+import type { StorybookConfig } from "@storybook/react-vite";
 
 export default {
   stories: [
@@ -11,20 +12,14 @@ export default {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm",
-  ],
+  addons: ["@storybook/addon-docs"],
   staticDirs: ["../public"],
+
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+
   refs: {
     "compound-web": {
       title: "Components",
@@ -32,4 +27,4 @@ export default {
       expanded: false,
     },
   },
-};
+} satisfies StorybookConfig;
