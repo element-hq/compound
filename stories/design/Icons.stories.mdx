@@ -1,0 +1,58 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Design/Icons" />
+
+# Icons
+
+## Initial set up for your icon contribution
+
+### What do I need to provide for requesting or adding a new icon?
+
+For managing an icon contribution we'll need two things from you:
+
+- A dedicated Figma page under this file’s INBOX section.
+- An issue on GitHub.
+
+> If you’re an engineer, please ask the designer you’re working with to handle
+> the icon request. If you can’t wait for that to happen, just open an issue (no
+> need to provide a Figma page) and we’ll try to coordinate it for you.
+
+### How do I set up the icon contribution page?
+
+- Create a new page with your icon or project name followed by your name with the following format: “Icon Name · Amsha” for a single icon, or “Project Name · Amsha” for multiple icons.
+- If requesting an icon, you’ll need to provide some visual examples of the contexts where you’re using or plan to use the icon.
+- If providing an icon proposal, please follow the guidelines for Importing vs. Creating icons.
+- If creating components, prefix them with an underscore “\_Icon Name” so they don’t get published prematurely.
+
+### How do I create the GitHub issue?
+
+- Open an issue on GitHub using the Icon Request template.
+
+We encourage you to file the issue yourself, as you’ll know more about the context.
+Alternatively, ping us — @vector-im/compound — in a Figma comment on your contribution
+page, and we’ll create it for you if the context is clear.
+
+### What will happen next?
+
+We’ll review your contribution to make sure:
+
+- It’s relevant and fits with the larger system.
+- In the case of contributions, we’ll also ensure it provides the expected source files and follows the design guidelines. We can take care of prepping the flattened version if it’s not provided.
+
+We’ll keep you updated:
+
+- Depending on the needs, we’ll coordinate requests and further discussion via comments in the GitHub issue or contextually on your Figma page. We may also need to sync chat in the “Compound | Lobby” room.
+- Finally, when the icon has been merged and published to the library, we’ll announce it in the “Compound | Lobby” room. You’ll also get notified by GitHub once we have closed the related issue.
+
+## Importing vs. Creating icons
+
+### Should I directly import from Material Symbols or create a custom icon?
+
+We can either import icons from Material Symbols or create custom ones.
+
+- For better library cohesion we default to the Material Symbols implementation of an icon. [Case: Importing icons from Material Symbols](https://www.figma.com/file/gkNXqPoiJhEv2wt0EJpew4/Compound-Icons?type=design&node-id=176-2333)
+- For some specific instances, we either modify the stock Material Symbols icons or create them from scratch following the Material Symbols Guidelines. [Case: Modifying stock icons or creating custom ones](https://www.figma.com/file/gkNXqPoiJhEv2wt0EJpew4/Compound-Icons?type=design&node-id=178-3081)
+
+Decide which approach fits your case best.
+
+Consider following the latter when you need to add extra character to a stock icon or when it doesn’t exist in Material Symbols.
