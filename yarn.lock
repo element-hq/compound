@@ -1854,11 +1854,10 @@
     "@typescript-eslint/types" "8.37.0"
     eslint-visitor-keys "^4.2.1"
 
-"@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^1.0.0":
-  version "1.9.1"
-  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/52edf4bcecbff17f68c685bfe6e4c8c0deb39983"
-  dependencies:
-    prettier "^3.3.3"
+"@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^6.0.0":
+  version "6.4.1"
+  uid bd38d61c1af0b7a786f3a7d4bf1d0afa3da86870
+  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/bd38d61c1af0b7a786f3a7d4bf1d0afa3da86870"
 
 "@vitest/expect@3.2.4":
   version "3.2.4"
