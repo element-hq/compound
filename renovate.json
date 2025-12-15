@@ -1,6 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:base"],
+  "semanticCommits": "disabled",
+  "packageRules": [
+    {
+      "groupName": "GitHub Actions",
+      "matchDepTypes": ["action"],
+      "pinDigests": true,
+      "extends": ["schedule:monthly"]
+    },
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "extends": ["schedule:weekly"]
+    }
   ]
 }
