@@ -2612,9 +2612,9 @@ eslint-config-prettier@^10.1.5:
   integrity sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==
 
 eslint-plugin-storybook@^9.0.17:
-  version "9.1.16"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-storybook/-/eslint-plugin-storybook-9.1.16.tgz#9ccdd3c9b962b8820a636c68f9429067fabf1bb9"
-  integrity sha512-I8f3DXniPxFbcptVgOjtIHNvW6sDu1O2d1zNsxLKmeAvEaRLus1ij8iFHCgkNzMthrU5U2F4Wdo/aaSpz5kHjA==
+  version "9.1.17"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-storybook/-/eslint-plugin-storybook-9.1.17.tgz#db2e9ff9c1ab4dfd76122efaa715361cc0d17813"
+  integrity sha512-7Qn3XxXdWLAt6arSH8Tt8Su/fAAqA+d5Oc51g7ubOE5Yfc5x0dMIgCfCG5RrIjt0RDRpwp4n194Mge+sAA3WMQ==
   dependencies:
     "@typescript-eslint/utils" "^8.8.1"
 
@@ -3922,9 +3922,9 @@ stable@^0.1.8:
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
 storybook@^9.0.17:
-  version "9.1.16"
-  resolved "https://registry.yarnpkg.com/storybook/-/storybook-9.1.16.tgz#fe92ac733781aa919104ecf090fd6615deaa6c69"
-  integrity sha512-339U14K6l46EFyRvaPS2ZlL7v7Pb+LlcXT8KAETrGPxq8v1sAjj2HAOB6zrlAK3M+0+ricssfAwsLCwt7Eg8TQ==
+  version "9.1.17"
+  resolved "https://registry.yarnpkg.com/storybook/-/storybook-9.1.17.tgz#1d210ecb7e62260a68644d3e6cc81e04c0dcce85"
+  integrity sha512-kfr6kxQAjA96ADlH6FMALJwJ+eM80UqXy106yVHNgdsAP/CdzkkicglRAhZAvUycXK9AeadF6KZ00CWLtVMN4w==
   dependencies:
     "@storybook/global" "^5.0.0"
     "@testing-library/jest-dom" "^6.6.3"
