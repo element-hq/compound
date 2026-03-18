@@ -1997,10 +1997,10 @@
     "@typescript-eslint/types" "8.56.1"
     eslint-visitor-keys "^5.0.0"
 
-"@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^7.0.0":
-  version "7.0.0"
-  uid "6df728f0abe575e915c866a38a6e227f6dd38852"
-  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/6df728f0abe575e915c866a38a6e227f6dd38852"
+"@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^8.0.0":
+  version "8.0.0"
+  uid "5c2d7e88eba47fbb2128255dbd403ea541478041"
+  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/5c2d7e88eba47fbb2128255dbd403ea541478041"
 
 "@vitest/expect@3.2.4":
   version "3.2.4"
