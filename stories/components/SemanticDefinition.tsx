@@ -24,10 +24,10 @@ export default function SemanticDefinition({
       <td>
         <div
           style={{
-            width: "150px",
+            width: "80px",
             height: "24px",
             borderRadius: "4px",
-            backgroundColor: `var(${propertyName})`,
+            background: `var(${propertyName})`,
             border: `1px solid var(--cpd-color-alpha-gray-400)`,
             boxSizing: "border-box",
           }}
@@ -35,7 +35,7 @@ export default function SemanticDefinition({
       </td>
       <td
         style={{
-          width: "200px",
+          width: "180px",
         }}
       >
         {tokenType.replace(/\w*-/, "") + tokenName}
