@@ -5,6 +5,7 @@
  * Please see LICENSE files in the repository root for full details.
  */
 
+import { camelCase } from "lodash-es";
 import React from "react";
 
 export default function SemanticDefinition({
@@ -46,6 +47,23 @@ export default function SemanticDefinition({
         }}
       >
         {propertyName}
+      </td>
+      <td>
+        <a
+          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+${propertyName}&type=code`}
+        >
+          Web
+        </a>{" "}
+        <a
+          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+language%3Akotlin+colors.${camelCase(tokenType + tokenName)}&type=code`}
+        >
+          Android
+        </a>{" "}
+        <a
+          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+language%3Aswift+compound.${camelCase(tokenType + tokenName)}&type=code`}
+        >
+          iOS
+        </a>
       </td>
     </tr>
   );
