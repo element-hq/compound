@@ -50,17 +50,17 @@ export default function SemanticDefinition({
       </td>
       <td>
         <a
-          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+${propertyName}&type=code`}
+          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+NOT+is:archived+${propertyName}&type=code`}
         >
           Web
         </a>{" "}
         <a
-          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+language%3Akotlin+colors.${camelCase(tokenType + tokenName)}&type=code`}
+          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+language%3Akotlin+NOT+is:archived+colors.${camelCase(tokenType + tokenName)}&type=code`}
         >
           Android
         </a>{" "}
         <a
-          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+language%3Aswift+compound.${camelCase(tokenType + tokenName)}&type=code`}
+          href={`https://github.com/search?q=org%3Aelement-hq+-repo%3Aelement-hq%2Fcompound-design-tokens+language%3Aswift+NOT+is:archived+compound.${camelCase(tokenType + tokenName)}&type=code`}
         >
           iOS
         </a>
