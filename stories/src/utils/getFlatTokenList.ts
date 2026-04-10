@@ -7,7 +7,7 @@
 
 export default function getFlatTokenList(
   tokens: any /* TODO: types */,
-  prefix = ""
+  prefix = "",
 ) {
   return Object.entries(tokens).reduce(
     (memo, [tokenName, tokenDefinition]: [string, any] /* TODO: types */) => {
@@ -19,12 +19,12 @@ export default function getFlatTokenList(
         });
       } else {
         memo = memo.concat(
-          getFlatTokenList(tokenDefinition, prefix + tokenName + "-")
+          getFlatTokenList(tokenDefinition, prefix + tokenName + "/"),
         );
       }
 
       return memo;
     },
-    [] as any[] /* TODO: types */
+    [] as any[] /* TODO: types */,
   );
 }
