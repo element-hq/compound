@@ -7,7 +7,7 @@
 
 @import url("./fonts.css");
 
-body {
+body, p {
   font: var(--cpd-font-body-md-regular);
 }
 
