@@ -25,9 +25,12 @@ export const parameters = {
       order: [
         "Overview",
         "Foundations",
+        ["Overview"],
         "Design",
+        ["Get started"],
         "Develop",
         "Content",
+        ["Overview"],
         "Tokens",
         ["Base Colors", "Semantic Colors", "Icons", "Typography", "Spacing"],
         "Components",
