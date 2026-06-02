@@ -1,0 +1,47 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Develop/Contributing" />
+
+# Contributing
+
+The Compound libraries should provide high-quality UI components that are accessible out of the box and ready to be used across Element products. This page lists some general guidelines to follow when contributing or reviewing a new component.
+
+If you're ever unsure how to proceed with development, come ask in the [Compound Lobby room](https://matrix.to/#/#compound:matrix.org) and consider pairing up with other developers to design the API together. Component implementations that don't meet these quality standards should be kept in downstream projects until they are ready.
+
+## Documentation
+
+Use the same name found in the designs for the name of your component.
+
+Each variant of a component should be documented with a story which contains a link to the relevant Figma design. Avoid the temptation to stuff multiple instances of a component into one story; give each of them a separate story.
+
+## Design tokens
+
+Use [spacing](https://compound.element.io/?path=/docs/tokens-spacing--docs) and [semantic color](https://compound.element.io/?path=/docs/tokens-semantic-colors--docs) tokens wherever possible. In the case of colors, make sure to use the right type of token (text, background, border…) for the visual element it's applied to. Normally design files will already follow these rules, but implementation time is a good opportunity to double-check proper usage of design tokens.
+
+If no appropriate semantic token is available for a given visual element, ask a designer to fix that. Base tokens such as color/gray/200 are less compatible with [theming](https://compound.element.io/?path=/docs/develop-theming--docs) and potentially also less accessible.
+
+## API considerations
+
+In React, always forward all extra props and refs to the top element.
+
+Components should not make any assumptions about how they'll be laid out. For instance in CSS, avoid setting `flex: 1` or `inline-size: max-content` on the top element.
+
+Use t-shirt sizes (XS, SM, MD, LG, XL) to talk about the size variants of a component and semantic terms (primary, critical, success, etc.) to talk about the color variants of a component. Don't use boolean flags to model these; instead consolidate them into props like `size: "sm" | "lg" | ...` and `kind: "primary" | "critical" | ...` so the component can easily be extended with even more variants in the future.
+
+Also consider whether text props should accept rich text (e.g. `ReactNode` rather than `string`).
+
+When implementing a button component on Web, allow it to optionally act as a link using an \<a\> element under the hood. This makes it possible to use for navigation in multi-page applications. The cleanest way to support this is by offering two React components: `<Button.Callback onClick=... />` and `<Button.Link href=... />`.
+
+## Accessibility
+
+All interactive components must come with accessibility tests. Good things to demonstrate include that elements can be located by their role and/or label and are compatible with keyboard interaction.
+
+Elements should accept focus even when disabled. Notably this is a challenge when working with HTML \<button\> elements.
+
+Ensure that users with [vestibular disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/) can disable any animation effects involving motion. In CSS, you can accomplish this with a [`prefers-reduced-motion` media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion).
+
+## Visuals
+
+Apply subtle color transitions to interactive components with a duration of 0.1s or 0.2s. There's no need to gate these behind a `prefers-reduced-motion` media query in most cases since such transitions are not vestibular motion triggers.
+
+Finally, always get a designer to review your implementation before shipping a new component.
