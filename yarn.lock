@@ -2238,9 +2238,9 @@
     "@typescript-eslint/types" "8.61.0"
     eslint-visitor-keys "^5.0.0"
 
-"@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^10.0.0":
-  version "10.1.0"
-  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/2fba988fe90b625a6cbdcac28b377ca1594d646a"
+"@vector-im/compound-design-tokens@github:element-hq/compound-design-tokens#semver:^10.2.2":
+  version "10.2.2"
+  resolved "https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/6e33c5bf3cbb4c29dbe5fc063d24b375849c0fac"
 
 "@vitest/expect@3.2.4":
   version "3.2.4"
