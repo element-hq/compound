@@ -5,7 +5,9 @@
   "main": "dist/tokens.js",
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check; rc=$?; [[ $rc -ne 0 ]] && printf '\\033[46;30m INFO \\033[0m To fix, run: pnpm format\\n' >&2; exit $rc"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,7 @@
     "eslint-plugin-storybook": "^10.0.0",
     "fs-extra": "^11.3.0",
     "lodash-es": "^4.17.21",
-    "prettier": "^3.6.2",
+    "oxfmt": "^0.64.0",
     "sharp": "^0.35.0",
     "storybook": "^10.0.0",
     "style-dictionary": "^5.0.1",
@@ -46,9 +48,6 @@
     "deepmerge": "^4.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   },
   "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621"
 }
