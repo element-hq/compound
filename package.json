@@ -22,7 +22,7 @@
     "lint:fix": "oxlint --fix"
   },
   "dependencies": {
-    "@vector-im/compound-design-tokens": "github:element-hq/compound-design-tokens#semver:^10.2.2",
+    "@vector-im/compound-design-tokens": "link:compound-design-tokens",
     "deepmerge": "^4.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

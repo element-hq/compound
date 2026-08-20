@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@vector-im/compound-design-tokens':
-        specifier: github:element-hq/compound-design-tokens#semver:^10.2.2
-        version: https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/edc554adf951b0627ab68b197f7d86c786189e76(@types/react@19.2.18)(react@19.2.8)
+        specifier: link:compound-design-tokens
+        version: link:compound-design-tokens
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
@@ -2047,24 +2047,6 @@ packages:
     engines: {node: '>=16.20.0'}
     cpu: [x64]
     os: [win32]
-
-  '@vector-im/compound-design-tokens@https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/edc554adf951b0627ab68b197f7d86c786189e76':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/edc554adf951b0627ab68b197f7d86c786189e76}
-    version: 10.2.4
-    peerDependencies:
-      '@adobe/leonardo-contrast-colors': ^1.0.0
-      '@types/react': '*'
-      chroma-js: ^3.0.0
-      react: ^17 || ^18 || ^19.0.0
-    peerDependenciesMeta:
-      '@adobe/leonardo-contrast-colors':
-        optional: true
-      '@types/react':
-        optional: true
-      chroma-js:
-        optional: true
-      react:
-        optional: true
 
   '@vitest/expect@3.2.4':
     resolution: {integrity: sha512-Io0yyORnB6sikFlt8QW5K7slY4OjqNX9jmJQ02QDda8lyM6B5oNgVWoSoKPac8/kgnCUzuHQKrSLtu/uOqqrig==}
@@ -5030,11 +5012,6 @@ snapshots:
 
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
-
-  '@vector-im/compound-design-tokens@https://codeload.github.com/element-hq/compound-design-tokens/tar.gz/edc554adf951b0627ab68b197f7d86c786189e76(@types/react@19.2.18)(react@19.2.8)':
-    optionalDependencies:
-      '@types/react': 19.2.18
-      react: 19.2.8
 
   '@vitest/expect@3.2.4':
     dependencies:

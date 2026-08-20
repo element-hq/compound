@@ -1,5 +1,7 @@
 .DS_Store
 node_modules
 
-.build
-storybook-static
+/.build
+/storybook-static
+
+/compound-design-tokens
