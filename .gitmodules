@@ -1,0 +1,3 @@
+[submodule "compound-design-tokens"]
+	path = compound-design-tokens
+	url = git@github.com:element-hq/compound-design-tokens.git
