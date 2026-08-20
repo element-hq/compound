@@ -1,10 +1,9 @@
 ---
 name: Component development
 about: Track platform implementation of a component
-title: ''
+title: ""
 labels: T-Component-Development
-assignees: ''
-
+assignees: ""
 ---
 
 # Figma document

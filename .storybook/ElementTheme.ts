@@ -12,8 +12,7 @@ export default create({
   base: "light",
   fontBase:
     '"Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif',
-  fontCode:
-    "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
+  fontCode: "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
 
   brandTitle: "Compound",
   brandUrl: "https://compound.element.io",

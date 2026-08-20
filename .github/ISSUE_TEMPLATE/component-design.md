@@ -1,10 +1,9 @@
 ---
 name: Component design
 about: Track platform design of a component
-title: ''
+title: ""
 labels: T-Component-Design
-assignees: ''
-
+assignees: ""
 ---
 
 # Figma document

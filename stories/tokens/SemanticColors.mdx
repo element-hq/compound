@@ -12,21 +12,27 @@ import getFlatTokenList from "../src/utils/getFlatTokenList";
 
 <h1>Semantic Colors</h1>
 
-<p style={{font: 'var(--cpd-font-body-md-regular)'}}>Semantic tokens describe the purpose of tokens in specific contexts. They are aliases to base tokens that add meaning about the different possible use cases for base tokens, by describing where or how they are used.</p>
+<p style={{ font: "var(--cpd-font-body-md-regular)" }}>
+  Semantic tokens describe the purpose of tokens in specific contexts. They are aliases to base
+  tokens that add meaning about the different possible use cases for base tokens, by describing
+  where or how they are used.
+</p>
 
 { Object.entries(merge(semanticTokens, semanticThemeTokens).color).map(([name, tokens]) => {
 return <div key={name} style={{ marginBlockStart: 20 }}>
 
 <h2>{name}</h2>
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', alignItems: 'start', gap: 12 }}>
-    {getFlatTokenList(tokens, `${name}/`).map((definition) => {
-      return (
-        <SemanticDefinition
-          key={definition.tokenName}
-          definition={definition}
-        />
-      );
-    })}
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
+    alignItems: "start",
+    gap: 12,
+  }}
+>
+  {getFlatTokenList(tokens, `${name}/`).map((definition) => {
+    return <SemanticDefinition key={definition.tokenName} definition={definition} />;
+  })}
 </div>
 
   </div>

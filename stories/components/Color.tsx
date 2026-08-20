@@ -25,9 +25,7 @@ export const extended = [
   { name: "Orange", preview: 600 },
 ];
 
-const scales = [
-  100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
-];
+const scales = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400];
 
 function Palette({ name }: { name: string }) {
   return (
@@ -73,11 +71,7 @@ function Palette({ name }: { name: string }) {
   );
 }
 
-export default function ({
-  palette,
-}: {
-  palette: { name: string; preview: number }[];
-}) {
+export default function ({ palette }: { palette: { name: string; preview: number }[] }) {
   return (
     <>
       <div className="color-palette-preview">

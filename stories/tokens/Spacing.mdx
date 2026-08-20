@@ -14,15 +14,12 @@ import SemanticTable from "../components/SemanticTable";
     })
     .sort((a, b) => {
       return (
-        parseInt(cpdLight[a].replace("px", ""), 10) -
-        parseInt(cpdLight[b].replace("px", ""), 10)
+        parseInt(cpdLight[a].replace("px", ""), 10) - parseInt(cpdLight[b].replace("px", ""), 10)
       );
     })
     .map((name) => {
       return {
-        preview: () => (
-          <div style={{ width: cpdLight[name] }} className="cpdSpacePreview" />
-        ),
+        preview: () => <div style={{ width: cpdLight[name] }} className="cpdSpacePreview" />,
         name,
         variable: cpdLight[name],
       };

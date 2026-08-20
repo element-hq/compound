@@ -2,6 +2,16 @@
   "name": "@vector-im/compound",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://compound.element.io",
+  "bugs": {
+    "url": "https://github.com/vector-im/compound/issues"
+  },
+  "license": "SEE LICENSE IN README.md",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vector-im/compound.git"
+  },
   "main": "dist/tokens.js",
   "scripts": {
     "storybook": "storybook dev -p 6006",
@@ -9,16 +19,12 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check; rc=$?; [[ $rc -ne 0 ]] && printf '\\033[46;30m INFO \\033[0m To fix, run: pnpm format\\n' >&2; exit $rc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vector-im/compound.git"
+  "dependencies": {
+    "@vector-im/compound-design-tokens": "github:element-hq/compound-design-tokens#semver:^10.2.2",
+    "deepmerge": "^4.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
-  "author": "",
-  "license": "SEE LICENSE IN README.md",
-  "bugs": {
-    "url": "https://github.com/vector-im/compound/issues"
-  },
-  "homepage": "https://compound.element.io",
   "devDependencies": {
     "@babel/core": "^8.0.0",
     "@babel/preset-env": "^8.0.0",
@@ -42,12 +48,6 @@
     "tinycolor2": "^1.6.0",
     "typescript": "^7.0.0",
     "vite": "^8.0.0"
-  },
-  "dependencies": {
-    "@vector-im/compound-design-tokens": "github:element-hq/compound-design-tokens#semver:^10.2.2",
-    "deepmerge": "^4.3.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
   },
   "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621"
 }

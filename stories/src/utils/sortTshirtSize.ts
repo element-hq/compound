@@ -31,7 +31,6 @@ export default function sortTshirtSize(a: string, b: string): number {
   return (
     sizeOrder[bSize.toLowerCase() as Size] +
     weightOrder[bWeight.toLowerCase() as Weight] -
-    (sizeOrder[aSize.toLowerCase() as Size] +
-      weightOrder[aWeight.toLowerCase() as Weight])
+    (sizeOrder[aSize.toLowerCase() as Size] + weightOrder[aWeight.toLowerCase() as Weight])
   );
 }

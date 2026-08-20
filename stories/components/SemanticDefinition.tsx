@@ -13,16 +13,11 @@ import {
 import { camelCase } from "lodash-es";
 import React, { useState } from "react";
 
-export default function SemanticDefinition({
-  definition,
-}: {
-  definition: any;
-}) {
-  const propertyName =
-    `--cpd-color-${definition.prefix}${definition.tokenName}`.replace(
-      /\//g,
-      "-",
-    );
+export default function SemanticDefinition({ definition }: { definition: any }) {
+  const propertyName = `--cpd-color-${definition.prefix}${definition.tokenName}`.replace(
+    /\//g,
+    "-",
+  );
   const camelCaseName = camelCase(definition.prefix + definition.tokenName);
   const [expanded, setExpanded] = useState(false);
   const ChevronIcon = expanded ? ChevronUpIcon : ChevronDownIcon;
@@ -46,8 +41,7 @@ export default function SemanticDefinition({
         padding: 12,
         display: "grid",
         gridTemplateColumns: "40px 12px 1fr 8px auto",
-        gridTemplateAreas:
-          '"swatch . name . chevron" "swatch . description . chevron"',
+        gridTemplateAreas: '"swatch . name . chevron" "swatch . description . chevron"',
         background: "var(--cpd-color-bg-canvas-default)",
         color: "var(--cpd-color-text-primary)",
       }}

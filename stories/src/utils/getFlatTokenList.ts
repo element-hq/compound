@@ -5,10 +5,7 @@
  * Please see LICENSE files in the repository root for full details.
  */
 
-export default function getFlatTokenList(
-  tokens: any /* TODO: types */,
-  prefix = "",
-) {
+export default function getFlatTokenList(tokens: any /* TODO: types */, prefix = "") {
   return Object.entries(tokens).reduce(
     (memo, [tokenName, tokenDefinition]: [string, any] /* TODO: types */) => {
       if (tokenDefinition.value) {
@@ -18,9 +15,7 @@ export default function getFlatTokenList(
           tokenName,
         });
       } else {
-        memo = memo.concat(
-          getFlatTokenList(tokenDefinition, prefix + tokenName + "/"),
-        );
+        memo = memo.concat(getFlatTokenList(tokenDefinition, prefix + tokenName + "/"));
       }
 
       return memo;

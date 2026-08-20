@@ -26,9 +26,10 @@ Once installed, run the following command at the root of this project
 ```
 yarn && yarn storybook
 ```
+
 ## The board
 
-The core team uses [this board]([url](https://github.com/orgs/vector-im/projects/52/)https://github.com/orgs/vector-im/projects/52/) to track work, using the columns for:
+The core team uses [this board](<[url](https://github.com/orgs/vector-im/projects/52/)https://github.com/orgs/vector-im/projects/52/>) to track work, using the columns for:
 
 - 'New': New or draft issues.
 - 'Backlog': Issue backlog, triaged in priority order.

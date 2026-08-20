@@ -1,10 +1,9 @@
 ---
 name: Request an icon
 about: Request the addition of an icon to compound-design-tokens
-title: ''
-labels: ['A-Icons', 'A-Design-Tokens']
-assignees: ''
-
+title: ""
+labels: ["A-Icons", "A-Design-Tokens"]
+assignees: ""
 ---
 
 # Context
@@ -20,6 +19,3 @@ assignees: ''
 # Screenshot
 
 <!-- Add a screenshot of the icon for posterity -->
-
-
-

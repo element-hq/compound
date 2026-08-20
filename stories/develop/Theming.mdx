@@ -11,10 +11,12 @@ The default set of design tokens provided by Compound contains some choices spec
 On Web, you can override any semantic token by redefining that token in the `custom` [cascade layer](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) provided by the [design tokens package](https://github.com/vector-im/compound-design-tokens/tree/develop/assets/web). This example demonstrates how you would change the `color.icon.accent-tertiary` token to blue, rather than Element's default green:
 
 ```css
-@import "@vector-im/compound-design-tokens/assets/web/css/compound-design-tokens.css" layer(compound);
+@import "@vector-im/compound-design-tokens/assets/web/css/compound-design-tokens.css"
+  layer(compound);
 
 @layer compound.custom {
-  :root, [class*="cpd-theme-"] {
+  :root,
+  [class*="cpd-theme-"] {
     --cpd-color-icon-accent-tertiary: var(--cpd-color-blue-800);
   }
 }

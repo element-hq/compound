@@ -45,28 +45,18 @@ export const parameters = {
      * for a list of the overridables components
      */
     components: {
-      p: ({ children }) => (
-        <p style={{ font: "var(--cpd-font-body-md-regular)" }}>{children}</p>
-      ),
+      p: ({ children }) => <p style={{ font: "var(--cpd-font-body-md-regular)" }}>{children}</p>,
       h1: ({ children }) => (
-        <h1 style={{ font: "var(--cpd-font-heading-xl-semibold)" }}>
-          {children}
-        </h1>
+        <h1 style={{ font: "var(--cpd-font-heading-xl-semibold)" }}>{children}</h1>
       ),
       h2: ({ children }) => (
-        <h2 style={{ font: "var(--cpd-font-heading-lg-semibold)" }}>
-          {children}
-        </h2>
+        <h2 style={{ font: "var(--cpd-font-heading-lg-semibold)" }}>{children}</h2>
       ),
       h3: ({ children }) => (
-        <h3 style={{ font: "var(--cpd-font-heading-md-semibold)" }}>
-          {children}
-        </h3>
+        <h3 style={{ font: "var(--cpd-font-heading-md-semibold)" }}>{children}</h3>
       ),
       h4: ({ children }) => (
-        <h4 style={{ font: "var(--cpd-font-heading-sm-semibold)" }}>
-          {children}
-        </h4>
+        <h4 style={{ font: "var(--cpd-font-heading-sm-semibold)" }}>{children}</h4>
       ),
       h5: ({ children }) => (
         <h5 style={{ font: "var(--cpd-font-body-lg-semibold)" }}>{children}</h5>
@@ -74,9 +64,7 @@ export const parameters = {
       h6: ({ children }) => (
         <h6 style={{ font: "var(--cpd-font-body-md-semibold)" }}>{children}</h6>
       ),
-      li: ({ children }) => (
-        <li style={{ font: "var(--cpd-font-body-md-regular" }}>{children}</li>
-      ),
+      li: ({ children }) => <li style={{ font: "var(--cpd-font-body-md-regular" }}>{children}</li>,
       a: ({ children, ...props }) => (
         <a
           {...props}

@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: Report a bug in a component
-title: ''
+title: ""
 labels: T-Defect
-assignees: ''
-
+assignees: ""
 ---
 
 # Platform
