@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
       - name: Build
-        run: yarn run build-storybook
+        run: pnpm build-storybook
 
   lint:
     name: Lint
