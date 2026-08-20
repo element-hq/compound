@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc",
+    "eslint",
+    "import",
+    "jsdoc",
+    "jsx-a11y",
+    "promise",
+    "react",
+  ],
+  "categories": {
+    "correctness": "error"
+  },
+  "options": {
+    "denyWarnings": true
+  },
+  "env": {
+    "builtin": true
+  },
+  "rules": {
+    "jsdoc/empty-tags": "error",
+    "jsdoc/check-property-names": "error",
+    "jsdoc/require-param-description": "warn",
+    "react/display-name": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/promise-function-async": "error",
+    "typescript/require-await": "error",
+    "typescript/await-thenable": "error",
+    "typescript/consistent-type-imports": "error"
+  }
+}

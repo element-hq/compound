@@ -17,7 +17,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format": "oxfmt",
-    "format:check": "oxfmt --check; rc=$?; [[ $rc -ne 0 ]] && printf '\\033[46;30m INFO \\033[0m To fix, run: pnpm format\\n' >&2; exit $rc"
+    "format:check": "oxfmt --check; rc=$?; [[ $rc -ne 0 ]] && printf '\\033[46;30m INFO \\033[0m To fix, run: pnpm format\\n' >&2; exit $rc",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
   "dependencies": {
     "@vector-im/compound-design-tokens": "github:element-hq/compound-design-tokens#semver:^10.2.2",
@@ -35,12 +37,10 @@
     "@types/lodash-es": "^4.17.12",
     "babel-loader": "^10.0.0",
     "chokidar-cli": "^3.0.0",
-    "eslint": "^9.31.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-storybook": "^10.0.0",
     "fs-extra": "^11.3.0",
     "lodash-es": "^4.17.21",
     "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
     "sharp": "^0.35.0",
     "storybook": "^10.0.0",
     "style-dictionary": "^5.0.1",
