@@ -10,12 +10,12 @@ import React from "react";
 function chunkArray(arr: string[]) {
   const chunkSize = 7;
   const numChunks = Math.ceil(arr.length / chunkSize);
-  return new Array(numChunks).fill(0).map((_, index) => {
+  return new Array.from({ length: numChunks }).fill(0).map((_, index) => {
     return arr.slice(index * chunkSize, (index + 1) * chunkSize);
   });
 }
 
-export default function ({ tokens }: { tokens: Record<string, any> }) {
+export default function Icon({ tokens }: { tokens: Record<string, any> }) {
   const icons = Object.keys(tokens.icon);
 
   return (

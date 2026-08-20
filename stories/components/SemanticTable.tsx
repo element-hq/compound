@@ -21,7 +21,7 @@ export default function SemanticTable({
     <table style={{ width: "100%" }}>
       <thead>
         <tr style={{ textAlign: "left" }}>
-          <th></th>
+          <th>Preview</th>
           <th>Name</th>
           <th>Description</th>
           <th>CSS Variable</th>

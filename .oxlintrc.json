@@ -9,7 +9,7 @@
     "jsdoc",
     "jsx-a11y",
     "promise",
-    "react",
+    "react"
   ],
   "categories": {
     "correctness": "error"

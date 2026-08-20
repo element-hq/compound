@@ -47,6 +47,7 @@ function Palette({ name }: { name: string }) {
                   backgroundColor: (cpdLight as any)[`cpdColor${name}${scale}`],
                 }}
                 className="cpdColorPreview"
+                aria-label="Color"
               />
             </td>
             <td>{scale}</td>
@@ -71,7 +72,7 @@ function Palette({ name }: { name: string }) {
   );
 }
 
-export default function ({ palette }: { palette: { name: string; preview: number }[] }) {
+export default function Palettes({ palette }: { palette: { name: string; preview: number }[] }) {
   return (
     <>
       <div className="color-palette-preview">
@@ -83,6 +84,7 @@ export default function ({ palette }: { palette: { name: string; preview: number
             style={{
               background: (cpdLight as any)[`cpdColor${name}${preview}`],
             }}
+            aria-label="Color"
           />
         ))}
       </div>
