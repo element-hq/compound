@@ -15,7 +15,7 @@ jobs:
     if: >
       contains(github.event.issue.labels.*.name, 'P-Web')
     steps:
-      - uses: actions/add-to-project@317ddf442000f117caae4ae9bf6c5b380d18ea68 # main
+      - uses: actions/add-to-project@c02d162cc960fe89745fcbc0053f3cce2c609043 # main
         with:
           project-url: https://github.com/orgs/element-hq/projects/120
           github-token: ${{ secrets.ELEMENT_BOT_TOKEN }}
